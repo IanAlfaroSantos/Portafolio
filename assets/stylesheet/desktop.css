@@ -1,0 +1,141 @@
+/* Header */
+.header {
+    justify-content: space-between;
+    padding: .8rem 3rem;
+    z-index: 2;
+}
+
+nav.nav_menu {
+    display: flex;
+}
+
+nav.nav_menu a {
+    font-size: 1.6rem;
+    padding: .5rem;
+    color: var(--white);
+    font-family: 'Cooper Hewitt';
+    text-decoration: none;
+    letter-spacing: .2rem;
+    right: 0;
+    margin-right: 2.5rem;
+}
+
+nav.nav_menu a:hover,
+nav.nav_menu a.active {
+    color: #00c6ff;
+    padding: .5rem;
+    border-bottom: 1px solid #00c6ff;
+    transition: all .5s;
+}
+
+nav.nav_menu.not-active a {
+    display: flex;
+}
+
+nav.nav_menu.not-active .flags {
+    display: flex;
+    width: 7rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav.nav_menu.not-active .flags__item {
+    filter: contrast(65%);
+    cursor: pointer;
+}
+
+nav.nav_menu.not-active .flags__item img {
+    width: 3rem;
+    transition: .4s all;
+}
+
+nav.nav_menu.not-active .flags__item:hover {
+    filter: contrast(100%);
+}
+
+.container--btnMenu {
+    display: none;
+}
+
+/* Home */
+.container_home {
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 120rem;
+    padding: 0 5rem;
+}
+
+.container_text--home {
+    text-align: left;
+}
+
+.home_text-1 {
+    font-size: 3.2rem;
+}
+
+.home_text-2 {
+    font-size: 6rem;
+}
+
+.typing {
+    font-size: 4.2rem;
+}
+
+/* Sobre mi */
+.tarjeta-sobremi {
+    flex-direction: row;
+    text-align: left;
+    gap: 6rem;
+}
+
+.container_image-sobreMi {
+    margin-left: 3%;
+    width: 350%;
+}
+
+.container_texto-sobreMi {
+    padding: 0;
+}
+
+.title_sobreMi {
+    font-size: 4rem;
+}
+
+.texto_sobreMi {
+    font-size: 2rem;
+    line-height: 3rem;
+}
+
+/* Habilidades */
+.title--habilidades {
+    font-size: 4rem;
+}
+
+/* Proyectos */
+.title--proyectos {
+    font-size: 4rem;
+}
+
+.cards_container--proyectos {
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.cards--proyectos {
+    width: 45rem;
+}
+
+/* Contacto */
+.contacto {
+    padding: 5rem 2rem;
+}
+
+.title--contacto {
+    font-size: 4rem;
+}
+
+.container_info--contacto {
+    flex-direction: row;
+    gap: 8rem;
+}

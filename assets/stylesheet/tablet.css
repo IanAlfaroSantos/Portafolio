@@ -1,0 +1,86 @@
+/* Header */
+nav.nav_menu.active {
+    width: 50%;
+    margin-left: 50%;
+    top: 5.9rem;
+}
+
+/* Home */
+.image_home {
+    max-width: 50rem;
+}
+
+.container_text-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home_text-1 {
+    margin-right: 1rem;
+    font-size: 2.4rem;
+}
+
+.home_text-2 {
+    font-size: 3.6rem;
+}
+
+/* Sobre mi */
+.sobreMi {
+    padding: 0 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container_content-sobreMi {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container_texto-sobreMi {
+    padding: 4rem;
+}
+
+.title_sobreMi {
+    font-size: 3rem;
+}
+
+.texto_sobreMi {
+    font-size: 1.8rem;
+    line-height: 2.5rem;
+}
+
+.container_image-sobreMi {
+    width: 25rem;
+}
+
+/* Habilidades */
+.title--habilidades {
+    font-size: 3rem;
+}
+
+/* Proyectos */
+.title--proyectos {
+    font-size: 3rem;
+}
+
+.cards--proyectos {
+    width: 35rem;
+}
+
+/* Contacto */
+.contacto {
+    padding: 5rem 2rem;
+}
+
+.title--contacto {
+    font-size: 3rem;
+}
+
+.container_info--contacto {
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+}

@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portafolio | Ian Alfaro Desarrollador Web">
+    <meta name="robots" content="index,follow">
+
+    <title>Ian Alfaro | Desarrollador Web</title>
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <link rel="stylesheet" href="./assets/stylesheet/loader.css">
+    <link rel="stylesheet" href="./assets/stylesheet/index.css">
+    <link rel="stylesheet" href="./assets/stylesheet/tablet.css" media="screen and (min-width: 760px)">
+    <link rel="stylesheet" href="./assets/stylesheet/desktop.css" media="screen and (min-width: 980px)">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cooper+Hewitt&family=PT+Sans&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="container--loader">
+        <div class="loader"></div>
+    </div>
+
+    <header class="header">
+        <div class="logo">
+            <a href="#home">Ian Alfaro</a>
+        </div>
+
+        <button class="container--btnMenu" id="button">
+            <span class="linea1"></span>
+            <span class="linea2"></span>
+        </button>
+
+        <nav class="nav_menu" data-section="nav">
+            <a href="#home" class="active" data-value="home-link">Inicio</a>
+            <a href="#sobreMi" data-value="about-link">Sobre mi</a>
+            <a href="#habilidades" data-value="skills-link">Habilidades</a>
+            <a href="#educacion" data-value="education-link">Educación</a>
+            <a href="#proyectos" data-value="projects-link">Proyectos</a>
+            <a href="#contacto" data-value="contact-link">Contacto</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="home" id="home">
+            <div class="container_home">
+                <div class="container_text--home" data-aos="fade-right">
+                    <p class="home_text-1" data-section="home" data-value="greet">Hola soy</p>
+                    <h2 class="home_text-2">Ian Alfaro</h2>
+                    <p class="home_text-3 typing" data-section="home" data-value="role">Desarrollador Web</p>
+                    <a href="https://drive.google.com/file/d/1gXomyC_jB4alhmqFQJutw5yi0ANYgGQN/view?usp=drive_link"
+                        target="_blank" class="btn--primary" data-section="home" data-value="projects">Mi
+                        Curriculum</a>
+                </div>
+
+                <div class="container_image--home" data-aos="fade-left">
+                    <img src="./assets/images/inico1.png" alt="Diseño de portafolio">
+                </div>
+            </div>
+        </section>
+
+        <section class="sobreMi" id="sobreMi">
+            <div class="container_content-sobreMi tarjeta-sobremi" data-aos="fade-up">
+                <div class="container_image-sobreMi">
+                    <img src="./assets/images/Sobre_mi1.jpeg" alt="Sobre mi">
+                </div>
+                <div class="container_texto-sobreMi">
+                    <h3 class="title_sobreMi" data-section="about" data-value="title">Sobre mi</h3>
+                    <p class="texto_sobreMi" data-section="about" data-value="text">Soy estudiante de
+                        "Informática" con una gran pasión por la tecnología y la programación. Mi objetivo es adquirir
+                        experiencia en el campo
+                        de la informática, aprender continuamente y seguir desarrollando mis habilidades técnicas y
+                        profesionales.
+                        Me considero una persona "amistosa" y "activa", con una excelente capacidad para trabajar bajo
+                        presión. Disfruto
+                        del trabajo organizado y estructurado, lo que me permite ser eficiente en la resolución de
+                        problemas. Además, sé cuándo
+                        y cómo pedir ayuda cuando lo necesito, lo que me permite seguir aprendiendo y mejorando. Me
+                        entusiasma aprender de los demás y aplicar ese conocimiento en proyectos
+                        colaborativos.</p>
+                    <div class="datos_generales">
+                        <h4>Datos Generales</h4>
+                        <ul>
+                            <li>Nombre: Ian Karel Alfaro Santos</li>
+                            <li>Años de experiencia: 3 años</li>
+                            <li>Ubicación: Guatemala</li>
+                            <li>Estado: Actualmente estudiando</li>
+                        </ul>
+                    </div>
+                    <div class="container_redes--sobreMi">
+                        <a href="https://www.linkedin.com/in/ian-alfaro-48b68334b/" target="_blank">
+                            <img src="./assets/images/icon-linkedin.png" alt="LinkedIn">
+                        </a>
+                        <a href="https://github.com/IanAlfaroSantos" target="_blank">
+                            <img src="./assets/images/icon-github.png" alt="GitHub">
+                        </a>
+                        <a href="mailto:ialfasa2020@gmail.com" target="_blank">
+                            <img src="./assets/images/icon-emailWhite.png" alt="Gmail">
+                        </a>
+                        <a href="https://wa.me/33662977" target="_blank">
+                            <img src="./assets/images/icon-whatsapp.png" alt="Whatsapp">
+                        </a>
+                        <a href="https://www.instagram.com/ian_alfaro_8273/" target="_blank">
+                            <img src="./assets/images/icon-instagram.png" alt="Instagram">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="habilidades" id="habilidades">
+            <h3 class="title--habilidades" data-aos="fade-right" data-section="skills" data-value="title">Habilidades
+            </h3>
+            <div class="cards_container--habilidades" data-aos="fade-up">
+                <div class="cards--habilidades" data-aos-delay="100">
+                    <div class="skill-info">
+                        <img src="./assets/images/icon-html.png" alt="HTML">
+                        <p>HTML</p>
+                    </div>
+                    <div class="skill-bar-container">
+                        <div class="skill-bar html-skill">
+                            <span class="skill-percent">90%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cards--habilidades" data-aos-delay="200">
+                    <div class="skill-info">
+                        <img src="./assets/images/icon-css.png" alt="CSS">
+                        <p>CSS</p>
+                    </div>
+                    <div class="skill-bar-container">
+                        <div class="skill-bar css-skill">
+                            <span class="skill-percent">85%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cards--habilidades" data-aos-delay="300">
+                    <div class="skill-info">
+                        <img src="./assets/images/icon-js.png" alt="JavaScript">
+                        <p>JavaScript</p>
+                    </div>
+                    <div class="skill-bar-container">
+                        <div class="skill-bar js-skill">
+                            <span class="skill-percent">60%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cards--habilidades" data-aos-delay="400">
+                    <div class="skill-info">
+                        <img src="./assets/images/icon-git.png" alt="Git">
+                        <p>Git</p>
+                    </div>
+                    <div class="skill-bar-container">
+                        <div class="skill-bar git-skill">
+                            <span class="skill-percent">75%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cards--habilidades" data-aos-delay="400">
+                    <div class="skill-info">
+                        <img src="./assets/images/icon-github.png" alt="Git">
+                        <p>GitHub</p>
+                    </div>
+                    <div class="skill-bar-container">
+                        <div class="skill-bar git-skill">
+                            <span class="skill-percent">75%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cards--habilidades" data-aos-delay="400">
+                    <div class="skill-info">
+                        <img src="./assets/images/icon-mysql.png" alt="Git">
+                        <p>MySQL</p>
+                    </div>
+                    <div class="skill-bar-container">
+                        <div class="skill-bar git-skill">
+                            <span class="skill-percent">65%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cards--habilidades" data-aos-delay="400">
+                    <div class="skill-info">
+                        <img src="./assets/images/icon-mongodb.png" alt="Git">
+                        <p>MongoDB</p>
+                    </div>
+                    <div class="skill-bar-container">
+                        <div class="skill-bar git-skill">
+                            <span class="skill-percent">75%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cards--habilidades" data-aos-delay="400">
+                    <div class="skill-info">
+                        <img src="./assets/images/icon-material_ui.png" alt="Git">
+                        <p>Material UI</p>
+                    </div>
+                    <div class="skill-bar-container">
+                        <div class="skill-bar git-skill">
+                            <span class="skill-percent">50%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cards--habilidades" data-aos-delay="400">
+                    <div class="skill-info">
+                        <img src="./assets/images/icon-bootstrap.png" alt="Git">
+                        <p>Bootstrap</p>
+                    </div>
+                    <div class="skill-bar-container">
+                        <div class="skill-bar git-skill">
+                            <span class="skill-percent">80%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cards--habilidades" data-aos-delay="400">
+                    <div class="skill-info">
+                        <img src="./assets/images/icon-jwt.png" alt="Git">
+                        <p>JWT</p>
+                    </div>
+                    <div class="skill-bar-container">
+                        <div class="skill-bar git-skill">
+                            <span class="skill-percent">70%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cards--habilidades" data-aos-delay="400">
+                    <div class="skill-info">
+                        <img src="./assets/images/icon-nodejs.png" alt="Git">
+                        <p>NodeJS</p>
+                    </div>
+                    <div class="skill-bar-container">
+                        <div class="skill-bar git-skill">
+                            <span class="skill-percent">70%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cards--habilidades" data-aos-delay="400">
+                    <div class="skill-info">
+                        <img src="./assets/images/icon-react.jpg" alt="Git">
+                        <p>React</p>
+                    </div>
+                    <div class="skill-bar-container">
+                        <div class="skill-bar git-skill">
+                            <span class="skill-percent">60%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cards--habilidades" data-aos-delay="400">
+                    <div class="skill-info">
+                        <img src="./assets/images/icon-postman.webp" alt="Git">
+                        <p>Postman</p>
+                    </div>
+                    <div class="skill-bar-container">
+                        <div class="skill-bar git-skill">
+                            <span class="skill-percent">90%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cards--habilidades" data-aos-delay="400">
+                    <div class="skill-info">
+                        <img src="./assets/images/icon-java.png" alt="Git">
+                        <p>Java</p>
+                    </div>
+                    <div class="skill-bar-container">
+                        <div class="skill-bar git-skill">
+                            <span class="skill-percent">50%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cards--habilidades" data-aos-delay="400">
+                    <div class="skill-info">
+                        <img src="./assets/images/icon-tailwind.png" alt="Git">
+                        <p>Tailwind</p>
+                    </div>
+                    <div class="skill-bar-container">
+                        <div class="skill-bar git-skill">
+                            <span class="skill-percent">50%</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="cards--habilidades" data-aos-delay="400">
+                    <div class="skill-info">
+                        <img src="./assets/images/icon-javaFX.jpg" alt="Git">
+                        <p>JavaFX</p>
+                    </div>
+                    <div class="skill-bar-container">
+                        <div class="skill-bar git-skill">
+                            <span class="skill-percent">30%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="educacion" id="educacion">
+            <h3 class="title--educacion" data-aos="fade-right">Educación y Experiencia</h3>
+            <div class="container_info--educacion">
+                <div class="tarjeta-educacion" data-aos="fade-up" data-aos-delay="200">
+                    <h4>Educación</h4>
+                    <ul>
+                        <li>2023 - 2025</li>
+                        <li>Desarrollo Web - Full Stack</li>
+                        <li>Manejo de Base de Datos: MongoDB y MySQL</li>
+                        <li>Java y JavaFX</li>
+                    </ul>
+                </div>
+                <div class="tarjeta-educacion" data-aos="fade-up" data-aos-delay="100">
+                    <h4>Experiencia</h4>
+                    <ul>
+                        <li>Desarrollador Full Stack</li>
+                        <li>Desarrollo: Pagina web implementado con React, JavaScript, NodeJs y MongoDB.</li>
+                        <li>Objetivo: Implementación de un sistema para que los clientes de InnovaQ puedan realizar
+                            pedidos de manera eficiente y consultar los productos disponibles.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="proyectos" id="proyectos">
+            <h3 class="title--proyectos" data-aos="fade-right" data-section="projects" data-value="title">Proyectos</h3>
+            <div class="cards_container--proyectos">
+                <div class="cards--proyectos" data-aos="fade-up" data-aos-delay="100">
+                    <div class="carousel-container" id="carousel-1">
+                        <div class="carousel-slides">
+                            <img src="./assets/images/proyectos/proyecto-1-img1.jpg" alt="Proyecto 1 - imagen 1"
+                                class="carousel-slide active">
+                            <img src="./assets/images/proyectos/proyecto-1-img2.jpg" alt="Proyecto 1 - imagen 2"
+                                class="carousel-slide">
+                            <img src="./assets/images/proyectos/proyecto-1-img3.jpg" alt="Proyecto 1 - imagen 3"
+                                class="carousel-slide">
+                        </div>
+                        <button class="carousel-button prev-button">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button class="carousel-button next-button">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                    <div class="text_container--proyectos">
+                        <h4 class="project_title">Mi Primer Proyecto</h4>
+                        <p class="project_text">Este es un proyecto de ejemplo que creé para mostrar mis habilidades. Es
+                            una página simple que utiliza diseño responsivo y animaciones básicas.</p>
+                        <div class="project_details">
+                            <p><span>Habilidades aprendidas:</span> HTML5, CSS3, JavaScript.</p>
+                            <a href="https://github.com/IanAlfaroSantos/proyecto-1" target="_blank" class="github-link">
+                                Ver en GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cards--proyectos" data-aos="fade-up" data-aos-delay="200">
+                    <div class="carousel-container" id="carousel-2">
+                        <div class="carousel-slides">
+                            <img src="./assets/images/proyectos/proyecto-2-img1.jpg" alt="Proyecto 2 - imagen 1"
+                                class="carousel-slide active">
+                            <img src="./assets/images/proyectos/proyecto-2-img2.jpg" alt="Proyecto 2 - imagen 2"
+                                class="carousel-slide">
+                            <img src="./assets/images/proyectos/proyecto-2-img3.jpg" alt="Proyecto 2 - imagen 3"
+                                class="carousel-slide">
+                        </div>
+                        <button class="carousel-button prev-button">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button class="carousel-button next-button">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                    <div class="text_container--proyectos">
+                        <h4 class="project_title">Segundo Proyecto</h4>
+                        <p class="project_text">Un proyecto más complejo con JavaScript. Incluye efectos de animación y
+                            un menú interactivo. Es una pequeña tienda online de prueba.</p>
+                        <div class="project_details">
+                            <p><span>Habilidades aprendidas:</span> HTML5, CSS3, JavaScript, DOM Manipulation.</p>
+                            <a href="https://github.com/IanAlfaroSantos/proyecto-2" target="_blank" class="github-link">
+                                Ver en GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="frase-motivadora" id="frase-motivadora">
+            <h3 class="title--frase" data-aos="fade-right" data-section="quote" data-value="title">Frase que me motiva a
+                seguir</h3>
+            <p class="texto--frase" data-aos="fade-up" data-section="quote" data-value="text">"El éxito es la suma de
+                pequeños esfuerzos repetidos día tras día." - Robert Collier</p>
+        </section>
+
+        <section class="contacto" id="contacto">
+            <h3 class="title--contacto" data-aos="fade-right" data-section="contact" data-value="title">Contacto</h3>
+            <div class="container_info--contacto">
+                <div class="info_contacto" data-aos="fade-right">
+                    <img src="./assets/images/icon-telefono.jpg" alt="Teléfono">
+                    <p>+502 3366 2977</p>
+                </div>
+                <div class="info_contacto" data-aos="fade-up">
+                    <img src="./assets/images/icon-email.png" alt="Correo">
+                    <p>ialfasa2020@gmail.com</p>
+                </div>
+                <div class="info_contacto" data-aos="fade-left">
+                    <img src="./assets/images/icon-map.png" alt="Ubicación">
+                    <p>Guatemala</p>
+                </div>
+            </div>
+
+            <form action="#" data-aos="fade-up" class="contact-form">
+                <input type="text" id="nombre" placeholder="Nombre" required>
+                <input type="email" id="email" placeholder="Correo" required>
+                <textarea name="mensaje" id="mensaje" rows="5" placeholder="Mensaje" required></textarea>
+                <input type="submit" value="Enviar">
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container_redes-footer">
+            <a href="https://www.linkedin.com/in/ian-alfaro-48b68334b/" target="_blank">
+                <img src="./assets/images/icon-linkedin.png" alt="LinkedIn">
+            </a>
+            <a href="https://github.com/IanAlfaroSantos" target="_blank">
+                <img src="./assets/images/icon-github.png" alt="GitHub">
+            </a>
+            <a href="mailto:ialfasa2020@gmail.com" target="_blank">
+                <img src="./assets/images/icon-emailWhite.png" alt="Gmail">
+            </a>
+            <a href="https://wa.me/33662977" target="_blank">
+                <img src="./assets/images/icon-whatsapp.png" alt="Whatsapp">
+            </a>
+            <a href="https://www.instagram.com/ian_alfaro_8273/" target="_blank">
+                <img src="./assets/images/icon-instagram.png" alt="Instagram">
+            </a>
+        </div>
+
+        <div class="container_text--footer">
+            <span> © 2025 Ian Alfaro | Todos los derechos Reservados</span>
+        </div>
+    </footer>
+
+    <div class="go-top-container">
+        <div class="go-top-button">
+            <i class="fas fa-chevron-up"></i>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="./script.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>
