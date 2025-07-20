@@ -7,6 +7,14 @@
 
 nav.nav_menu {
     display: flex;
+    flex-direction: row;
+    position: static;
+    background-color: transparent;
+    box-shadow: none;
+    align-items: center;
+    top: auto;
+    left: auto;
+    width: auto;
 }
 
 nav.nav_menu a {
@@ -16,12 +24,11 @@ nav.nav_menu a {
     font-family: 'Cooper Hewitt';
     text-decoration: none;
     letter-spacing: .2rem;
-    right: 0;
     margin-right: 2.5rem;
+    border-bottom: none;
 }
 
-nav.nav_menu a:hover,
-nav.nav_menu a.active {
+nav.nav_menu a:hover {
     color: #00c6ff;
     padding: .5rem;
     border-bottom: 1px solid #00c6ff;
@@ -83,6 +90,8 @@ nav.nav_menu.not-active .flags__item:hover {
 
 /* Sobre mi */
 .tarjeta-sobremi {
+    margin-top: 5%;
+    margin-bottom: 5%;
     flex-direction: row;
     text-align: left;
     gap: 6rem;
@@ -93,49 +102,41 @@ nav.nav_menu.not-active .flags__item:hover {
     width: 350%;
 }
 
-.container_texto-sobreMi {
-    padding: 0;
-}
-
-.title_sobreMi {
-    font-size: 4rem;
-}
-
-.texto_sobreMi {
-    font-size: 2rem;
-    line-height: 3rem;
-}
-
 /* Habilidades */
-.title--habilidades {
-    font-size: 4rem;
+.cards_container--habilidades {
+    gap: 3rem;
 }
 
 /* Proyectos */
-.title--proyectos {
-    font-size: 4rem;
+.cards--proyectos {
+    flex-basis: 45rem;
+    flex-grow: 1;
 }
 
-.cards_container--proyectos {
+.project_details {
+    flex-direction: column;
+}
+
+.project-links {
+    flex-direction: row;
+}
+
+/* Educación y Experiencia */
+.container_info--educacion {
     flex-direction: row;
     justify-content: center;
-    align-items: stretch;
-}
-
-.cards--proyectos {
-    width: 45rem;
 }
 
 /* Contacto */
 .contacto {
-    padding: 5rem 2rem;
-}
-
-.title--contacto {
-    font-size: 4rem;
+    padding: 3rem 10rem;
 }
 
 .container_info--contacto {
     flex-direction: row;
-    gap: 8rem;
+    justify-content: space-around;
+}
+
+.contacto form {
+    margin-bottom: 0;
 }

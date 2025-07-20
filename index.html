@@ -11,7 +11,7 @@
     <title>Ian Alfaro | Desarrollador Web</title>
 
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
     <link rel="stylesheet" href="./assets/stylesheet/loader.css">
     <link rel="stylesheet" href="./assets/stylesheet/index.css">
@@ -21,6 +21,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cooper+Hewitt&family=PT+Sans&display=swap" rel="stylesheet">
+    <link rel="icon" href="./assets/images/favicon.jpg" type="image/jpg">
 </head>
 
 <body>
@@ -43,7 +44,7 @@
             <a href="#home" class="active" data-value="home-link">Inicio</a>
             <a href="#sobreMi" data-value="about-link">Sobre mi</a>
             <a href="#habilidades" data-value="skills-link">Habilidades</a>
-            <a href="#educacion" data-value="education-link">Educación</a>
+            <a href="#educacion" data-value="education-link">Educación y Experiencia</a>
             <a href="#proyectos" data-value="projects-link">Proyectos</a>
             <a href="#contacto" data-value="contact-link">Contacto</a>
         </nav>
@@ -55,14 +56,11 @@
                 <div class="container_text--home" data-aos="fade-right">
                     <p class="home_text-1" data-section="home" data-value="greet">Hola soy</p>
                     <h2 class="home_text-2">Ian Alfaro</h2>
-                    <p class="home_text-3 typing" data-section="home" data-value="role">Desarrollador Web</p>
+                    <p class="home_text-3 typing" data-section="home" data-value="role">Estudiante de Desarrollador
+                        Web<br>+3 años de experiencia</p>
                     <a href="https://drive.google.com/file/d/1gXomyC_jB4alhmqFQJutw5yi0ANYgGQN/view?usp=drive_link"
                         target="_blank" class="btn--primary" data-section="home" data-value="projects">Mi
                         Curriculum</a>
-                </div>
-
-                <div class="container_image--home" data-aos="fade-left">
-                    <img src="./assets/images/inico1.png" alt="Diseño de portafolio">
                 </div>
             </div>
         </section>
@@ -74,8 +72,8 @@
                 </div>
                 <div class="container_texto-sobreMi">
                     <h3 class="title_sobreMi" data-section="about" data-value="title">Sobre mi</h3>
-                    <p class="texto_sobreMi" data-section="about" data-value="text">Soy estudiante de
-                        "Informática" con una gran pasión por la tecnología y la programación. Mi objetivo es adquirir
+                    <p class="texto_sobreMi" data-section="about" data-value="text">Soy estudiante de Desarrollador Web
+                        "Full-Stack" con una gran pasión por la tecnología y la programación. Mi objetivo es adquirir
                         experiencia en el campo
                         de la informática, aprender continuamente y seguir desarrollando mis habilidades técnicas y
                         profesionales.
@@ -107,6 +105,9 @@
                         </a>
                         <a href="https://wa.me/33662977" target="_blank">
                             <img src="./assets/images/icon-whatsapp.png" alt="Whatsapp">
+                        </a>
+                        <a href="https://www.facebook.com/ian.alfaro.7547/" target="_blank">
+                            <img src="./assets/images/icon-facebook.png" alt="Whatsapp">
                         </a>
                         <a href="https://www.instagram.com/ian_alfaro_8273/" target="_blank">
                             <img src="./assets/images/icon-instagram.png" alt="Instagram">
@@ -158,12 +159,12 @@
 
                 <div class="cards--habilidades" data-aos-delay="400">
                     <div class="skill-info">
-                        <img src="./assets/images/icon-git.png" alt="Git">
-                        <p>Git</p>
+                        <img src="./assets/images/icon-axios.webp" alt="Git">
+                        <p>Axios</p>
                     </div>
                     <div class="skill-bar-container">
                         <div class="skill-bar git-skill">
-                            <span class="skill-percent">75%</span>
+                            <span class="skill-percent">90%</span>
                         </div>
                     </div>
                 </div>
@@ -314,25 +315,69 @@
         </section>
 
         <section class="educacion" id="educacion">
-            <h3 class="title--educacion" data-aos="fade-right">Educación y Experiencia</h3>
-            <div class="container_info--educacion">
-                <div class="tarjeta-educacion" data-aos="fade-up" data-aos-delay="200">
-                    <h4>Educación</h4>
-                    <ul>
-                        <li>2023 - 2025</li>
-                        <li>Desarrollo Web - Full Stack</li>
-                        <li>Manejo de Base de Datos: MongoDB y MySQL</li>
-                        <li>Java y JavaFX</li>
-                    </ul>
+            <h3 class="title--educacion" data-aos="fade-right" data-section="education" data-value="title">Educación y
+                Experiencia
+            </h3>
+            <div class="cards_container--educacion" data-aos="fade-up">
+                <div class="cards--educacion" data-aos-delay="300">
+                    <div class="image-educacion">
+                        <img src="./assets/images/icon-java.png" alt="Logo de Platzi">
+                    </div>
+                    <div class="text_educacion">
+                        <h4>Desarrollo de aplicaciones con Java</h4>
+                        <span>2023</span>
+                        <p>Fundación Kinal Guatemala</p>
+                    </div>
                 </div>
-                <div class="tarjeta-educacion" data-aos="fade-up" data-aos-delay="100">
-                    <h4>Experiencia</h4>
-                    <ul>
-                        <li>Desarrollador Full Stack</li>
-                        <li>Desarrollo: Pagina web implementado con React, JavaScript, NodeJs y MongoDB.</li>
-                        <li>Objetivo: Implementación de un sistema para que los clientes de InnovaQ puedan realizar
-                            pedidos de manera eficiente y consultar los productos disponibles.</li>
-                    </ul>
+                <div class="cards--educacion" data-aos-delay="300">
+                    <div class="image-educacion">
+                        <img src="./assets/images/icon-javaFX.jpg" alt="Logo de Platzi">
+                    </div>
+                    <div class="text_educacion">
+                        <h4>Desarrollo de aplicaciones con JavaFX</h4>
+                        <span>2024</span>
+                        <p>Fundación Kinal Guatemala</p>
+                    </div>
+                </div>
+                <div class="cards--educacion" data-aos-delay="300">
+                    <div class="image-educacion">
+                        <img src="./assets/images/icon-nodejs.png" alt="Logo de Platzi">
+                    </div>
+                    <div class="text_educacion">
+                        <h4>Desarrollo Backend</h4>
+                        <span>2024 - 2025</span>
+                        <p>Fundación Kinal Guatemala</p>
+                    </div>
+                </div>
+                <div class="cards--educacion" data-aos-delay="200">
+                    <div class="image-educacion">
+                        <img src="./assets/images/icon-react.jpg" alt="Logo de FreeCodeCamp">
+                    </div>
+                    <div class="text_educacion">
+                        <h4>Desarrollo Frontend</h4>
+                        <span>2024 - 2025</span>
+                        <p>Fundación Kinal Guatemala</p>
+                    </div>
+                </div>
+                <div class="cards--educacion" data-aos-delay="100">
+                    <div class="image-educacion">
+                        <img src="./assets/images/icon-jwt.png" alt="Logo de Udemy">
+                    </div>
+                    <div class="text_educacion">
+                        <h4>Desarrollador Web Completo</h4>
+                        <span>2024 - 2025</span>
+                        <p>Fundación Kinal Guatemala</p>
+                    </div>
+                </div>
+                <div class="cards--educacion" data-aos-delay="100">
+                    <div class="image-educacion">
+                        <img src="./assets/images/0 InnovaQ.png" alt="Logo de Udemy">
+                    </div>
+                    <div class="text_educacion">
+                        <h4>Desarrollo página web de un catalogo y pedidos de productos</h4>
+                        <span>2025</span>
+                        <p>InnovaQ</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -343,11 +388,13 @@
                 <div class="cards--proyectos" data-aos="fade-up" data-aos-delay="100">
                     <div class="carousel-container" id="carousel-1">
                         <div class="carousel-slides">
-                            <img src="./assets/images/proyectos/proyecto-1-img1.jpg" alt="Proyecto 1 - imagen 1"
-                                class="carousel-slide active">
-                            <img src="./assets/images/proyectos/proyecto-1-img2.jpg" alt="Proyecto 1 - imagen 2"
+                            <img src="./assets/images/0 SuperKinal.png" alt="Proyecto 1 - imagen 1"
                                 class="carousel-slide">
-                            <img src="./assets/images/proyectos/proyecto-1-img3.jpg" alt="Proyecto 1 - imagen 3"
+                            <img src="./assets/images/1 SuperKinal.png" alt="Proyecto 1 - imagen 2"
+                                class="carousel-slide">
+                            <img src="./assets/images/2 SuperKinal.png" alt="Proyecto 1 - imagen 3"
+                                class="carousel-slide">
+                            <img src="./assets/images/3 SuperKinal.png" alt="Proyecto 1 - imagen 4"
                                 class="carousel-slide">
                         </div>
                         <button class="carousel-button prev-button">
@@ -358,12 +405,33 @@
                         </button>
                     </div>
                     <div class="text_container--proyectos">
-                        <h4 class="project_title">Mi Primer Proyecto</h4>
-                        <p class="project_text">Este es un proyecto de ejemplo que creé para mostrar mis habilidades. Es
-                            una página simple que utiliza diseño responsivo y animaciones básicas.</p>
+                        <h4 class="project_title">Proyecto SuperKinal</h4>
+                        <p class="project_text">Este proyecto es un programa desarrollado con JavaFX, que su objetivo es
+                            crear una aplicación que facilite la gestión de una tienda.</p>
                         <div class="project_details">
-                            <p><span>Habilidades aprendidas:</span> HTML5, CSS3, JavaScript.</p>
-                            <a href="https://github.com/IanAlfaroSantos/proyecto-1" target="_blank" class="github-link">
+                            <div class="proyect_details_1">
+                                <p><span>Habilidades Aprendidas
+                            </div>
+                            <div class="project-skills-list">
+                                <div class="skill--card">
+                                    <img src="./assets/images/icon-java.png" alt="Java">
+                                    <p>Java</p>
+                                </div>
+                                <div class="skill--card">
+                                    <img src="./assets/images/icon-javaFX.jpg" alt="JavaFX">
+                                    <p>JavaFX</p>
+                                </div>
+                                <div class="skill--card">
+                                    <img src="./assets/images/icon-mysql.png" alt="MySQL">
+                                    <p>MySQL</p>
+                                </div>
+                                <div class="skill--card">
+                                    <img src="./assets/images/icon-scene.png" alt="Java">
+                                    <p>Scene Builder</p>
+                                </div>
+                            </div>
+                            <a href="https://github.com/IanAlfaroSantos/IN5CM-Proyecto-SuperKinal.git" target="_blank"
+                                class="github-link">
                                 Ver en GitHub
                             </a>
                         </div>
@@ -373,11 +441,403 @@
                 <div class="cards--proyectos" data-aos="fade-up" data-aos-delay="200">
                     <div class="carousel-container" id="carousel-2">
                         <div class="carousel-slides">
-                            <img src="./assets/images/proyectos/proyecto-2-img1.jpg" alt="Proyecto 2 - imagen 1"
+                            <img src="./assets/images/0 GiffApp.png" alt="Proyecto 2 - imagen 1"
                                 class="carousel-slide active">
-                            <img src="./assets/images/proyectos/proyecto-2-img2.jpg" alt="Proyecto 2 - imagen 2"
+                            <img src="./assets/images/1 GiffApp.png" alt="Proyecto 2 - imagen 2" class="carousel-slide">
+                            <img src="./assets/images/3 GiffApp.png" alt="Proyecto 2 - imagen 3" class="carousel-slide">
+                        </div>
+                        <button class="carousel-button prev-button">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button class="carousel-button next-button">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                    <div class="text_container--proyectos">
+                        <h4 class="project_title">Proyecto Giff</h4>
+                        <p class="project_text">Este proyecto es una API de GIFs que permite a los usuarios buscar GIFs
+                            de personajes de películas, animes, caricaturas, entre otros.</p>
+                        <div class="project_details">
+                            <p><span>Habilidades Aprendidas</span>
+                            <div class="project-skills-list">
+                                <div class="skill--card">
+                                    <img src="./assets/images/icon-react.jpg" alt="React">
+                                    <p>React</p>
+                                </div>
+                                <div class="skill--card">
+                                    <img src="./assets/images/icon-js.png" alt="JavaScript">
+                                    <p>JavaScript</p>
+                                </div>
+                                <div class="skill--card">
+                                    <img src="./assets/images/icon-html.png" alt="HTML">
+                                    <p>HTML</p>
+                                </div>
+                                <div class="skill--card">
+                                    <img src="./assets/images/icon-bootstrap.png" alt="CSS">
+                                    <p>Bootstrap</p>
+                                </div>
+                                <div class="skill--card">
+                                    <img src="./assets/images/icon-css.png" alt="CSS">
+                                    <p>CSS</p>
+                                </div>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/IanAlfaroSantos/Proyecto-GifApp.git" target="_blank"
+                                    class="github-link">Ver en GitHub</a>
+                                <a href="https://proyecto-gifapp.vercel.app/" target="_blank" class="github-link">Vista
+                                    Previa</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cards--proyectos" data-aos="fade-up" data-aos-delay="200">
+                    <div class="carousel-container" id="carousel-2">
+                        <div class="carousel-slides">
+                            <img src="./assets/images/0 Pokemon.png" alt="Proyecto 2 - imagen 1"
+                                class="carousel-slide active">
+                            <img src="./assets/images/1 Pokemon.png" alt="Proyecto 2 - imagen 2" class="carousel-slide">
+                            <img src="./assets/images/3 Pokemon.png" alt="Proyecto 2 - imagen 3" class="carousel-slide">
+                        </div>
+                        <button class="carousel-button prev-button">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button class="carousel-button next-button">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                    <div class="text_container--proyectos">
+                        <h4 class="project_title">Proyecto Pokemon</h4>
+                        <p class="project_text">Este proyecto es una API de Pokémon que permite a los usuarios buscar el
+                            nombre de cualquier Pokémon y consultar sus propiedades en detalle.</p>
+                        <div class="project_details">
+                            <p><span>Habilidades Aprendidas</span>
+                            <div class="project-skills-list">
+                                <div class="skill--card">
+                                    <img src="./assets/images/icon-react.jpg" alt="React">
+                                    <p>React</p>
+                                </div>
+                                <div class="skill--card">
+                                    <img src="./assets/images/icon-js.png" alt="JavaScript">
+                                    <p>JavaScript</p>
+                                </div>
+                                <div class="skill--card">
+                                    <img src="./assets/images/icon-html.png" alt="HTML">
+                                    <p>HTML</p>
+                                </div>
+                                <div class="skill--card">
+                                    <img src="./assets/images/icon-bootstrap.png" alt="CSS">
+                                    <p>Bootstrap</p>
+                                </div>
+                                <div class="skill--card">
+                                    <img src="./assets/images/icon-css.png" alt="CSS">
+                                    <p>CSS</p>
+                                </div>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/IanAlfaroSantos/Proyecto-PokemonApp.git" target="_blank"
+                                    class="github-link">Ver en GitHub</a>
+                                <a href="https://proyecto-pokemonapp.vercel.app/" target="_blank"
+                                    class="github-link">Vista
+                                    Previa</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cards--proyectos" data-aos="fade-up" data-aos-delay="200">
+                    <div class="carousel-container" id="carousel-2">
+                        <div class="carousel-slides">
+                            <img src="./assets/images/0 Marvel.png" alt="Proyecto 2 - imagen 1"
+                                class="carousel-slide active">
+                            <img src="./assets/images/1 Marvel.png" alt="Proyecto 2 - imagen 2" class="carousel-slide">
+                            <img src="./assets/images/2 Marvel.png" alt="Proyecto 2 - imagen 3" class="carousel-slide">
+                        </div>
+                        <button class="carousel-button prev-button">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button class="carousel-button next-button">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                    <div class="text_container--proyectos">
+                        <h4 class="project_title">Proyecto Marvel</h4>
+                        <p class="project_text">Este proyecto es una API de Marvel que muestra todas las versiones de
+                            los personajes de Marvel, con opciones de paginación y búsqueda.</p>
+                        <div class="project_details">
+                            <p><span>Habilidades Aprendidas</span>
+                            <div class="project-skills-list">
+                                <div class="skill--card">
+                                    <img src="./assets/images/icon-react.jpg" alt="React">
+                                    <p>React</p>
+                                </div>
+                                <div class="skill--card">
+                                    <img src="./assets/images/icon-js.png" alt="JavaScript">
+                                    <p>JavaScript</p>
+                                </div>
+                                <div class="skill--card">
+                                    <img src="./assets/images/icon-html.png" alt="HTML">
+                                    <p>HTML</p>
+                                </div>
+                                <div class="skill--card">
+                                    <img src="./assets/images/icon-bootstrap.png" alt="CSS">
+                                    <p>Bootstrap</p>
+                                </div>
+                                <div class="skill--card">
+                                    <img src="./assets/images/icon-css.png" alt="CSS">
+                                    <p>CSS</p>
+                                </div>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/IanAlfaroSantos/Proyecto-MarvelApp" target="_blank"
+                                    class="github-link">Ver en GitHub</a>
+                                <a href="https://proyecto-marvelapp.vercel.app/" target="_blank"
+                                    class="github-link">Vista
+                                    Previa</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cards--proyectos" data-aos="fade-up" data-aos-delay="200">
+                    <div class="carousel-container" id="carousel-2">
+                        <div class="carousel-slides">
+                            <img src="./assets/images/0 Spotify.png" alt="Proyecto 2 - imagen 1"
+                                class="carousel-slide active">
+                            <img src="./assets/images/1 Spotify.png" alt="Proyecto 2 - imagen 2" class="carousel-slide">
+                            <img src="./assets/images/2 Spotify.png" alt="Proyecto 2 - imagen 3" class="carousel-slide">
+                            <img src="./assets/images/3 Spotify.png" alt="Proyecto 2 - imagen 3" class="carousel-slide">
+                        </div>
+                        <button class="carousel-button prev-button">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button class="carousel-button next-button">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                    <div class="text_container--proyectos">
+                        <h4 class="project_title">Proyecto Spotify</h4>
+                        <p class="project_text">Este proyecto es una API de Spotify que permite a los usuarios buscar
+                            por nombre de grupo, artista, canción o incluso álbum. Además, ofrece la opción de
+                            reproducir una parte de la canción.</p>
+                        <div class="project_details">
+                            <p><span>Habilidades Aprendidas</span>
+                            <div class="project-skills-list">
+                                <div class="skill--card">
+                                    <img src="./assets/images/icon-react.jpg" alt="React">
+                                    <p>React</p>
+                                </div>
+                                <div class="skill--card">
+                                    <img src="./assets/images/icon-js.png" alt="JavaScript">
+                                    <p>JavaScript</p>
+                                </div>
+                                <div class="skill--card">
+                                    <img src="./assets/images/icon-html.png" alt="HTML">
+                                    <p>HTML</p>
+                                </div>
+                                <div class="skill--card">
+                                    <img src="./assets/images/icon-bootstrap.png" alt="CSS">
+                                    <p>Bootstrap</p>
+                                </div>
+                                <div class="skill--card">
+                                    <img src="./assets/images/icon-css.png" alt="CSS">
+                                    <p>CSS</p>
+                                </div>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/IanAlfaroSantos/Proyecto-Spotify.git" target="_blank"
+                                    class="github-link">Ver en GitHub</a>
+                                <a href="https://proyecto-spotify-lac.vercel.app/" target="_blank"
+                                    class="github-link">Vista
+                                    Previa</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cards--proyectos" data-aos="fade-up" data-aos-delay="200">
+                    <div class="carousel-container" id="carousel-2">
+                        <div class="carousel-slides">
+                            <img src="./assets/images/0 Storage.png" alt="Proyecto 2 - imagen 1"
+                                class="carousel-slide active">
+                            <img src="./assets/images/1 Storage.png" alt="Proyecto 2 - imagen 2" class="carousel-slide">
+                            <img src="./assets/images/2 Storage.png" alt="Proyecto 2 - imagen 3" class="carousel-slide">
+                            <img src="./assets/images/3 Storage.png" alt="Proyecto 2 - imagen 3" class="carousel-slide">
+                            <img src="./assets/images/4 storage.png" alt="Proyecto 2 - imagen 3" class="carousel-slide">
+                        </div>
+                        <button class="carousel-button prev-button">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button class="carousel-button next-button">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                    <div class="text_container--proyectos">
+                        <h4 class="project_title">Proyecto Almacenadora</h4>
+                        <p class="project_text">Este proyecto está diseñado para la gestión de una almacén, permitiendo
+                            a administradores y empleados llevar un control eficiente sobre el inventario, clientes,
+                            proveedores, así como generar informes y estadísticas.</p>
+                        <div class="project_details">
+                            <p><span>Habilidades Aprendidas</span>
+                            <div class="project-skills-list">
+                                <div class="skill--card">
+                                    <img src="./assets/images/icon-react.jpg" alt="React">
+                                    <p>React</p>
+                                </div>
+                                <div class="skill--card">
+                                    <img src="./assets/images/icon-axios.webp" alt="React">
+                                    <p>Axios</p>
+                                </div>
+                                <div class="skill--card">
+                                    <img src="./assets/images/icon-material_ui.png" alt="React">
+                                    <p>Material UI</p>
+                                </div>
+                                <div class="skill--card">
+                                    <img src="./assets/images/icon-js.png" alt="JavaScript">
+                                    <p>JavaScript</p>
+                                </div>
+                                <div class="skill--card">
+                                    <img src="./assets/images/icon-nodejs.png" alt="JavaScript">
+                                    <p>NodeJS</p>
+                                </div>
+                                <div class="skill--card">
+                                    <img src="./assets/images/icon-jwt.png" alt="JavaScript">
+                                    <p>JWT</p>
+                                </div>
+                                <div class="skill--card">
+                                    <img src="./assets/images/icon-mongodb.png" alt="JavaScript">
+                                    <p>MongoDB</p>
+                                </div>
+                                <div class="skill--card">
+                                    <img src="./assets/images/icon-github.png" alt="JavaScript">
+                                    <p>GitHub</p>
+                                </div>
+                                <div class="skill--card">
+                                    <img src="./assets/images/icon-postman.webp" alt="JavaScript">
+                                    <p>PostMan</p>
+                                </div>
+                                <div class="skill--card">
+                                    <img src="./assets/images/icon-html.png" alt="HTML">
+                                    <p>HTML</p>
+                                </div>
+                                <div class="skill--card">
+                                    <img src="./assets/images/icon-bootstrap.png" alt="CSS">
+                                    <p>Bootstrap</p>
+                                </div>
+                                <div class="skill--card">
+                                    <img src="./assets/images/icon-css.png" alt="CSS">
+                                    <p>CSS</p>
+                                </div>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/IanAlfaroSantos/storage.git" target="_blank"
+                                    class="github-link">Ver en GitHub</a>
+                                <a href="https://storage-lemon.vercel.app/" target="_blank" class="github-link">Vista
+                                    Previa</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cards--proyectos" data-aos="fade-up" data-aos-delay="200">
+                    <div class="carousel-container" id="carousel-2">
+                        <div class="carousel-slides">
+                            <img src="./assets/images/0 Blog.png" alt="Proyecto 2 - imagen 1"
+                                class="carousel-slide active">
+                            <img src="./assets/images/1 Blog.png" alt="Proyecto 2 - imagen 2" class="carousel-slide">
+                            <img src="./assets/images/2 Blog.png" alt="Proyecto 2 - imagen 3" class="carousel-slide">
+                            <img src="./assets/images/3 Blog.png" alt="Proyecto 2 - imagen 3" class="carousel-slide">
+                            <img src="./assets/images/4 Blog.png" alt="Proyecto 2 - imagen 3" class="carousel-slide">
+                        </div>
+                        <button class="carousel-button prev-button">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button class="carousel-button next-button">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                    <div class="text_container--proyectos">
+                        <h4 class="project_title">Proyecto Blog</h4>
+                        <p class="project_text">Este proyecto es una plataforma de gestión de publicaciones que permite
+                            a los profesores compartir material, facilitando que los alumnos puedan estudiar de manera
+                            más eficiente.</p>
+                        <div class="project_details">
+                            <p><span>Habilidades Aprendidas</span>
+                            <div class="project-skills-list">
+                                <div class="skill--card">
+                                    <img src="./assets/images/icon-react.jpg" alt="React">
+                                    <p>React</p>
+                                </div>
+                                <div class="skill--card">
+                                    <img src="./assets/images/icon-axios.webp" alt="React">
+                                    <p>Axios</p>
+                                </div>
+                                <div class="skill--card">
+                                    <img src="./assets/images/icon-js.png" alt="JavaScript">
+                                    <p>JavaScript</p>
+                                </div>
+                                <div class="skill--card">
+                                    <img src="./assets/images/icon-nodejs.png" alt="JavaScript">
+                                    <p>NodeJS</p>
+                                </div>
+                                <div class="skill--card">
+                                    <img src="./assets/images/icon-jwt.png" alt="JavaScript">
+                                    <p>JWT</p>
+                                </div>
+                                <div class="skill--card">
+                                    <img src="./assets/images/icon-mongodb.png" alt="JavaScript">
+                                    <p>MongoDB</p>
+                                </div>
+                                <div class="skill--card">
+                                    <img src="./assets/images/icon-github.png" alt="JavaScript">
+                                    <p>GitHub</p>
+                                </div>
+                                <div class="skill--card">
+                                    <img src="./assets/images/icon-postman.webp" alt="JavaScript">
+                                    <p>PostMan</p>
+                                </div>
+                                <div class="skill--card">
+                                    <img src="./assets/images/icon-html.png" alt="HTML">
+                                    <p>HTML</p>
+                                </div>
+                                <div class="skill--card">
+                                    <img src="./assets/images/icon-bootstrap.png" alt="CSS">
+                                    <p>Bootstrap</p>
+                                </div>
+                                <div class="skill--card">
+                                    <img src="./assets/images/icon-tailwind.png" alt="CSS">
+                                    <p>Tailwind</p>
+                                </div>
+                                <div class="skill--card">
+                                    <img src="./assets/images/icon-css.png" alt="CSS">
+                                    <p>CSS</p>
+                                </div>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/IanAlfaroSantos/Blog_Fronted.git" target="_blank"
+                                    class="github-link">Ver en GitHub</a>
+                                <a href="https://blog-fronted-eight.vercel.app/" target="_blank"
+                                    class="github-link">Vista
+                                    Previa</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cards--proyectos" data-aos="fade-up" data-aos-delay="200">
+                    <div class="carousel-container" id="carousel-2">
+                        <div class="carousel-slides">
+                            <img src="./assets/images/0 Hotelera.png" alt="Proyecto 2 - imagen 1"
+                                class="carousel-slide active">
+                            <img src="./assets/images/1 Hotelera.png" alt="Proyecto 2 - imagen 2"
                                 class="carousel-slide">
-                            <img src="./assets/images/proyectos/proyecto-2-img3.jpg" alt="Proyecto 2 - imagen 3"
+                            <img src="./assets/images/5 Hotelera.png" alt="Proyecto 2 - imagen 3"
+                                class="carousel-slide">
+                            <img src="./assets/images/2 Hotelera.png" alt="Proyecto 2 - imagen 3"
+                                class="carousel-slide">
+                            <img src="./assets/images/3 Hotelera.png" alt="Proyecto 2 - imagen 3"
+                                class="carousel-slide">
+                            <img src="./assets/images/4 Hotelera.png" alt="Proyecto 2 - imagen 3"
                                 class="carousel-slide">
                         </div>
                         <button class="carousel-button prev-button">
@@ -388,26 +848,265 @@
                         </button>
                     </div>
                     <div class="text_container--proyectos">
-                        <h4 class="project_title">Segundo Proyecto</h4>
-                        <p class="project_text">Un proyecto más complejo con JavaScript. Incluye efectos de animación y
-                            un menú interactivo. Es una pequeña tienda online de prueba.</p>
+                        <h4 class="project_title">Proyecto Hotelera</h4>
+                        <p class="project_text">Este proyecto es un sistema de gestión de hoteles que permite a los
+                            administradores gestionar habitaciones y salas de eventos de diferentes hoteles. Además,
+                            ofrece a los usuarios la posibilidad de reservar habitaciones, salas de eventos y obtener
+                            información sobre los hoteles disponibles en el sistema.</p>
                         <div class="project_details">
-                            <p><span>Habilidades aprendidas:</span> HTML5, CSS3, JavaScript, DOM Manipulation.</p>
-                            <a href="https://github.com/IanAlfaroSantos/proyecto-2" target="_blank" class="github-link">
-                                Ver en GitHub
-                            </a>
+                            <p><span>Habilidades Aprendidas</span>
+                            <div class="project-skills-list">
+                                <div class="skill--card">
+                                    <img src="./assets/images/icon-react.jpg" alt="React">
+                                    <p>React</p>
+                                </div>
+                                <div class="skill--card">
+                                    <img src="./assets/images/icon-axios.webp" alt="React">
+                                    <p>Axios</p>
+                                </div>
+                                <div class="skill--card">
+                                    <img src="./assets/images/icon-material_ui.png" alt="React">
+                                    <p>Material UI</p>
+                                </div>
+                                <div class="skill--card">
+                                    <img src="./assets/images/icon-js.png" alt="JavaScript">
+                                    <p>JavaScript</p>
+                                </div>
+                                <div class="skill--card">
+                                    <img src="./assets/images/icon-nodejs.png" alt="JavaScript">
+                                    <p>NodeJS</p>
+                                </div>
+                                <div class="skill--card">
+                                    <img src="./assets/images/icon-jwt.png" alt="JavaScript">
+                                    <p>JWT</p>
+                                </div>
+                                <div class="skill--card">
+                                    <img src="./assets/images/icon-mongodb.png" alt="JavaScript">
+                                    <p>MongoDB</p>
+                                </div>
+                                <div class="skill--card">
+                                    <img src="./assets/images/icon-github.png" alt="JavaScript">
+                                    <p>GitHub</p>
+                                </div>
+                                <div class="skill--card">
+                                    <img src="./assets/images/icon-postman.webp" alt="JavaScript">
+                                    <p>PostMan</p>
+                                </div>
+                                <div class="skill--card">
+                                    <img src="./assets/images/icon-html.png" alt="HTML">
+                                    <p>HTML</p>
+                                </div>
+                                <div class="skill--card">
+                                    <img src="./assets/images/icon-bootstrap.png" alt="CSS">
+                                    <p>Bootstrap</p>
+                                </div>
+                                <div class="skill--card">
+                                    <img src="./assets/images/icon-tailwind.png" alt="CSS">
+                                    <p>Tailwind</p>
+                                </div>
+                                <div class="skill--card">
+                                    <img src="./assets/images/icon-css.png" alt="CSS">
+                                    <p>CSS</p>
+                                </div>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/IanAlfaroSantos/Proyecto-Bimestral2-2025_Fronted.git"
+                                    target="_blank" class="github-link">Ver en GitHub</a>
+                                <a href="https://proyecto-bimestral2-2025-fronted.vercel.app/" target="_blank"
+                                    class="github-link">Vista
+                                    Previa</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cards--proyectos" data-aos="fade-up" data-aos-delay="200">
+                    <div class="carousel-container" id="carousel-2">
+                        <div class="carousel-slides">
+                            <img src="./assets/images/0 Banco.png" alt="Proyecto 2 - imagen 1"
+                                class="carousel-slide active">
+                            <img src="./assets/images/1 Banco.png" alt="Proyecto 2 - imagen 2" class="carousel-slide">
+                            <img src="./assets/images/3 Banco.png" alt="Proyecto 2 - imagen 3" class="carousel-slide">
+                            <img src="./assets/images/4 Banco.png" alt="Proyecto 2 - imagen 3" class="carousel-slide">
+                            <img src="./assets/images/5 Banco.png" alt="Proyecto 2 - imagen 3" class="carousel-slide">
+                            <img src="./assets/images/6 Banco.png" alt="Proyecto 2 - imagen 3" class="carousel-slide">
+                            <img src="./assets/images/7 Banco.png" alt="Proyecto 2 - imagen 3" class="carousel-slide">
+                            <img src="./assets/images/8 Banco.png" alt="Proyecto 2 - imagen 3" class="carousel-slide">
+                        </div>
+                        <button class="carousel-button prev-button">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button class="carousel-button next-button">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                    <div class="text_container--proyectos">
+                        <h4 class="project_title">Proyecto Banking System</h4>
+                        <p class="project_text">Este proyecto es un sistema bancario que facilita a los administradores
+                            la gestión de clientes, cuentas, créditos, depósitos, transferencias y pedidos. Además,
+                            ofrece a los clientes la posibilidad de realizar transferencias tanto dentro del mismo banco
+                            como interbancarias, así como solicitar créditos y abrir nuevas cuentas bancarias,
+                            recibiendo notificaciones por correo electrónico sobre estas acciones.</p>
+                        <div class="project_details">
+                            <p><span>Habilidades Aprendidas</span>
+                            <div class="project-skills-list">
+                                <div class="skill--card">
+                                    <img src="./assets/images/icon-react.jpg" alt="React">
+                                    <p>React</p>
+                                </div>
+                                <div class="skill--card">
+                                    <img src="./assets/images/icon-axios.webp" alt="React">
+                                    <p>Axios</p>
+                                </div>
+                                <div class="skill--card">
+                                    <img src="./assets/images/icon-material_ui.png" alt="React">
+                                    <p>Material UI</p>
+                                </div>
+                                <div class="skill--card">
+                                    <img src="./assets/images/icon-js.png" alt="JavaScript">
+                                    <p>JavaScript</p>
+                                </div>
+                                <div class="skill--card">
+                                    <img src="./assets/images/icon-nodejs.png" alt="JavaScript">
+                                    <p>NodeJS</p>
+                                </div>
+                                <div class="skill--card">
+                                    <img src="./assets/images/icon-jwt.png" alt="JavaScript">
+                                    <p>JWT</p>
+                                </div>
+                                <div class="skill--card">
+                                    <img src="./assets/images/icon-mongodb.png" alt="JavaScript">
+                                    <p>MongoDB</p>
+                                </div>
+                                <div class="skill--card">
+                                    <img src="./assets/images/icon-github.png" alt="JavaScript">
+                                    <p>GitHub</p>
+                                </div>
+                                <div class="skill--card">
+                                    <img src="./assets/images/icon-postman.webp" alt="JavaScript">
+                                    <p>PostMan</p>
+                                </div>
+                                <div class="skill--card">
+                                    <img src="./assets/images/icon-html.png" alt="HTML">
+                                    <p>HTML</p>
+                                </div>
+                                <div class="skill--card">
+                                    <img src="./assets/images/icon-bootstrap.png" alt="CSS">
+                                    <p>Bootstrap</p>
+                                </div>
+                                <div class="skill--card">
+                                    <img src="./assets/images/icon-tailwind.png" alt="CSS">
+                                    <p>Tailwind</p>
+                                </div>
+                                <div class="skill--card">
+                                    <img src="./assets/images/icon-css.png" alt="CSS">
+                                    <p>CSS</p>
+                                </div>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/KevinDGutierrez/Banking-System-Frontend.git" target="_blank"
+                                    class="github-link">Ver en GitHub</a>
+                                <a href="https://banking-system-frontend-production.up.railway.app/" target="_blank"
+                                    class="github-link">Vista
+                                    Previa</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cards--proyectos" data-aos="fade-up" data-aos-delay="200">
+                    <div class="carousel-container" id="carousel-2">
+                        <div class="carousel-slides">
+                            <img src="./assets/images/0 InnovaQ.png" alt="Proyecto 2 - imagen 1"
+                                class="carousel-slide active">
+                        </div>
+                        <button class="carousel-button prev-button">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button class="carousel-button next-button">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                    <div class="text_container--proyectos">
+                        <h4 class="project_title">Proyecto InnovaQ (En proceso)</h4>
+                        <p class="project_text">Este proyecto es un sistema que permitira a los clientes de la empresa
+                            InnovaQ realizar pedidos y consultar los productos disponibles de manera eficiente.</p>
+                        <div class="project_details">
+                            <p><span>Habilidades Aprendidas</span>
+                            <div class="project-skills-list">
+                                <div class="skill--card">
+                                    <img src="./assets/images/icon-react.jpg" alt="React">
+                                    <p>React</p>
+                                </div>
+                                <div class="skill--card">
+                                    <img src="./assets/images/icon-axios.webp" alt="React">
+                                    <p>Axios</p>
+                                </div>
+                                <div class="skill--card">
+                                    <img src="./assets/images/icon-material_ui.png" alt="React">
+                                    <p>Material UI</p>
+                                </div>
+                                <div class="skill--card">
+                                    <img src="./assets/images/icon-js.png" alt="JavaScript">
+                                    <p>JavaScript</p>
+                                </div>
+                                <div class="skill--card">
+                                    <img src="./assets/images/icon-nodejs.png" alt="JavaScript">
+                                    <p>NodeJS</p>
+                                </div>
+                                <div class="skill--card">
+                                    <img src="./assets/images/icon-jwt.png" alt="JavaScript">
+                                    <p>JWT</p>
+                                </div>
+                                <div class="skill--card">
+                                    <img src="./assets/images/icon-mongodb.png" alt="JavaScript">
+                                    <p>MongoDB</p>
+                                </div>
+                                <div class="skill--card">
+                                    <img src="./assets/images/icon-github.png" alt="JavaScript">
+                                    <p>GitHub</p>
+                                </div>
+                                <div class="skill--card">
+                                    <img src="./assets/images/icon-postman.webp" alt="JavaScript">
+                                    <p>PostMan</p>
+                                </div>
+                                <div class="skill--card">
+                                    <img src="./assets/images/icon-html.png" alt="HTML">
+                                    <p>HTML</p>
+                                </div>
+                                <div class="skill--card">
+                                    <img src="./assets/images/icon-bootstrap.png" alt="CSS">
+                                    <p>Bootstrap</p>
+                                </div>
+                                <div class="skill--card">
+                                    <img src="./assets/images/icon-tailwind.png" alt="CSS">
+                                    <p>Tailwind</p>
+                                </div>
+                                <div class="skill--card">
+                                    <img src="./assets/images/icon-css.png" alt="CSS">
+                                    <p>CSS</p>
+                                </div>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/AlexxoK/InnovaQ_Backend.git" target="_blank"
+                                    class="github-link">Ver Back-end</a>
+                                <a href="https://github.com/AlexxoK/InnovaQ_Frontend.git" target="_blank"
+                                    class="github-link">Ver Front-end</a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <br><br><br><br>
+            <section class="frase-motivadora" id="frase-motivadora">
+                <h3 class="title--frase" data-aos="fade-right" data-section="quote" data-value="title">Frase que me
+                    motiva a
+                    seguir</h3>
+                <p class="texto--frase" data-aos="fade-up" data-section="quote" data-value="text">"El éxito es la suma
+                    de
+                    pequeños esfuerzos repetidos día tras día." - Robert Collier</p>
+            </section>
         </section>
 
-        <section class="frase-motivadora" id="frase-motivadora">
-            <h3 class="title--frase" data-aos="fade-right" data-section="quote" data-value="title">Frase que me motiva a
-                seguir</h3>
-            <p class="texto--frase" data-aos="fade-up" data-section="quote" data-value="text">"El éxito es la suma de
-                pequeños esfuerzos repetidos día tras día." - Robert Collier</p>
-        </section>
 
         <section class="contacto" id="contacto">
             <h3 class="title--contacto" data-aos="fade-right" data-section="contact" data-value="title">Contacto</h3>
@@ -426,10 +1125,11 @@
                 </div>
             </div>
 
-            <form action="#" data-aos="fade-up" class="contact-form">
-                <input type="text" id="nombre" placeholder="Nombre" required>
-                <input type="email" id="email" placeholder="Correo" required>
-                <textarea name="mensaje" id="mensaje" rows="5" placeholder="Mensaje" required></textarea>
+            <form action="https://formspree.io/f/mrblebyq" data-aos="fade-up" class="contact-form" method="post"
+                id="tuFormularioId">
+                <input type="text" name="nombre" placeholder="Nombre completo">
+                <input type="email" name="correo" placeholder="Correo electrónico">
+                <textarea name="mensaje" placeholder="Escribe tu mensaje..."></textarea>
                 <input type="submit" value="Enviar">
             </form>
         </section>
@@ -449,6 +1149,9 @@
             <a href="https://wa.me/33662977" target="_blank">
                 <img src="./assets/images/icon-whatsapp.png" alt="Whatsapp">
             </a>
+            <a href="https://www.facebook.com/ian.alfaro.7547/" target="_blank">
+                <img src="./assets/images/icon-facebook.png" alt="Whatsapp">
+            </a>
             <a href="https://www.instagram.com/ian_alfaro_8273/" target="_blank">
                 <img src="./assets/images/icon-instagram.png" alt="Instagram">
             </a>
@@ -459,6 +1162,13 @@
         </div>
     </footer>
 
+    <div class="modal_image-container" id="modalImage">
+        <span class="close-btn">&times;</span>
+        <div class="modal_content">
+            <img id="modalImageContent" src="" alt="Imagen de Proyecto">
+        </div>
+    </div>
+
     <div class="go-top-container">
         <div class="go-top-button">
             <i class="fas fa-chevron-up"></i>
@@ -466,6 +1176,7 @@
     </div>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="./script.js"></script>
     <script>
         AOS.init();

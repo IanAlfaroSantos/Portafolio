@@ -53,12 +53,14 @@ html {
 }
 
 @keyframes loader {
+
     0%,
     80%,
     100% {
-        box-shadow: 0 2.5rem 0 -1.3rem;    
+        box-shadow: 0 2.5rem 0 -1.3rem;
     }
+
     40% {
-        box-shadow: 0 2.5rem 0 0;  
+        box-shadow: 0 2.5rem 0 0;
     }
 }

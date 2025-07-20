@@ -5,21 +5,18 @@ const inputEmail = document.querySelector('#email');
 const flagsElement = document.getElementById('flags');
 const textsToChange = document.querySelectorAll('[data-section]');
 
-/* ===== Loader =====*/
 window.addEventListener('load', () => {
     const contenedorLoader = document.querySelector('.container--loader');
     contenedorLoader.style.opacity = 0;
     contenedorLoader.style.visibility = 'hidden';
-});
+})
 
-/*===== Header =====*/
 window.addEventListener('scroll', () => {
     const header = document.querySelector('header');
     header.classList.toggle('abajo', window.scrollY > 0);
-});
+})
 
-/*===== Boton Menu =====*/
-btn.addEventListener('click', function() {
+btn.addEventListener('click', function () {
     if (this.classList.contains('active')) {
         this.classList.remove('active');
         this.classList.add('not-active');
@@ -32,19 +29,7 @@ btn.addEventListener('click', function() {
         document.querySelector('.nav_menu').classList.remove('not-active');
         document.querySelector('.nav_menu').classList.add('active');
     }
-});
-
-/*===== Cambio de idioma =====*/
-const changeLanguage = async language => {
-    const requestJson = await fetch(`./assets/languages/${language}.json`);
-    const texts = await requestJson.json();
-
-    for(const textToChange of textsToChange) {
-        const section = textToChange.dataset.section;
-        const value = textToChange.dataset.value;
-        textToChange.innerHTML = texts[section][value];
-    }
-}
+})
 
 if (flagsElement) {
     flagsElement.addEventListener('click', (e) => {
@@ -52,14 +37,13 @@ if (flagsElement) {
     });
 }
 
-/*===== class active por secciones =====*/
 window.addEventListener('scroll', () => {
     const scrollY = window.pageYOffset;
     const navLinks = document.querySelectorAll('nav a');
 
     navLinks.forEach(link => {
         link.classList.remove('active');
-    });
+    })
 
     sectionAll.forEach((current) => {
         const sectionHeight = current.offsetHeight;
@@ -72,60 +56,139 @@ window.addEventListener('scroll', () => {
                 correspondingLink.classList.add('active');
             }
         }
-    });
-});
+    })
+})
 
-/*===== Carrusel de proyectos =====*/
 document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.carousel-container').forEach(carousel => {
         const slides = carousel.querySelector('.carousel-slides');
-        const slideCount = slides.children.length;
+        const slideElements = carousel.querySelectorAll('.carousel-slide');
+        const slideCount = slideElements.length;
         let currentSlide = 0;
 
-        // Establecer la primera imagen como activa
-        slides.children[0].classList.add('active');
-
-        // Función para mover el carrusel
-        const moveCarousel = () => {
-            const slideWidth = slides.children[0].clientWidth;
-            slides.style.transform = `translateX(-${currentSlide * slideWidth}px)`;
-            
-            // Actualizar clase 'active'
-            document.querySelectorAll(`#${carousel.id} .carousel-slide`).forEach((slide, index) => {
-                slide.classList.toggle('active', index === currentSlide);
+        const showSlide = () => {
+            slideElements.forEach(slide => {
+                slide.classList.remove('active');
             });
-        };
 
-        // Botón "siguiente"
+            slideElements[currentSlide].classList.add('active');
+
+            const slideWidth = slideElements[0].clientWidth;
+            slides.style.transform = `translateX(-${currentSlide * slideWidth}px)`;
+        }
+
         carousel.querySelector('.next-button').addEventListener('click', () => {
             currentSlide = (currentSlide + 1) % slideCount;
-            moveCarousel();
-        });
+            showSlide();
+        })
 
-        // Botón "anterior"
         carousel.querySelector('.prev-button').addEventListener('click', () => {
             currentSlide = (currentSlide - 1 + slideCount) % slideCount;
-            moveCarousel();
-        });
+            showSlide();
+        })
 
-        // Ajustar el tamaño del carrusel cuando la ventana cambia de tamaño
-        window.addEventListener('resize', moveCarousel);
-    });
-});
+        showSlide();
 
-/*===== Boton y función ir arriba =====*/
-window.onscroll = function() {
+        window.addEventListener('resize', showSlide);
+    })
+
+    const modalImage = document.getElementById('modalImage');
+    const modalImageContent = document.getElementById('modalImageContent');
+    const closeBtn = document.querySelector('.close-btn');
+
+    document.querySelectorAll('.carousel-slide').forEach(img => {
+        img.addEventListener('click', (event) => {
+            modalImage.classList.add('active');
+            modalImageContent.src = event.target.src;
+            document.body.classList.add('no-scroll');
+        })
+    })
+
+    function closeModal() {
+        modalImage.classList.remove('active');
+        document.body.classList.remove('no-scroll');
+    }
+
+    closeBtn.addEventListener('click', () => {
+        closeModal();
+    })
+
+    modalImage.addEventListener('click', (event) => {
+        if (event.target === modalImage) {
+            closeModal();
+        }
+    })
+})
+
+window.onscroll = function () {
     if (document.documentElement.scrollTop > 100) {
         document.querySelector('.go-top-container').classList.add('show');
     }
     else {
         document.querySelector('.go-top-container').classList.remove('show');
     }
-};
+}
 
 document.querySelector('.go-top-button').addEventListener('click', () => {
     window.scrollTo({
         top: 0,
         behavior: 'smooth'
-    });
-});
+    })
+})
+
+const menuBtn = document.querySelector('.container--btnMenu');
+const navMenu = document.querySelector('.nav_menu');
+const navLinks = document.querySelectorAll('.nav_menu a');
+
+function toggleMenu() {
+    navMenu.classList.toggle('active');
+}
+
+if (menuBtn) {
+    menuBtn.addEventListener('click', toggleMenu);
+}
+
+navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        if (navMenu.classList.contains('active')) {
+            navMenu.classList.remove('active');
+        }
+    })
+})
+
+const form = document.getElementById('tuFormularioId');
+const formspreeUrl = "https://formspree.io/f/mrblebyq";
+
+form.addEventListener("submit", async (event) => {
+    event.preventDefault();
+
+    const formData = new FormData(form);
+    const response = await fetch(formspreeUrl, {
+        method: "POST",
+        body: formData,
+        headers: {
+            'Accept': 'application/json'
+        }
+    })
+
+    if (response.ok) {
+        Swal.fire({
+            title: "¡Mensaje enviado!",
+            text: "Gracias por contactarme, te responderé pronto.",
+            icon: "success",
+            background: 'var(--charcoal)',
+            color: 'var(--light-grey)',
+            confirmButtonColor: 'var(--primary-color)'
+        })
+        form.reset();
+    } else {
+        Swal.fire({
+            title: "Error",
+            text: "Hubo un problema al enviar tu mensaje. Inténtalo de nuevo.",
+            icon: "error",
+            background: 'var(--charcoal)',
+            color: 'var(--light-grey)',
+            confirmButtonColor: '#d33'
+        })
+    }
+})
