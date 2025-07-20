@@ -11,7 +11,7 @@
 
 :root {
     --primary-color: #00c6ff;
-    --secondary-color: #f700ff;
+    --secondary-color: #ff0000;
     --accent-color: #ffde00;
     --dark-bg: #121212;
     --charcoal: #1e1e1e;
@@ -466,11 +466,59 @@ nav.nav_menu a.active {
 }
 
 .js-skill {
-    width: 80%;
+    width: 60%;
 }
 
 .git-skill {
     width: 75%;
+}
+
+.axios-skill {
+    width: 90%;
+}
+
+.mysql-skill {
+    width: 65%;
+}
+
+.mongodb-skill {
+    width: 75%;
+}
+
+.material_ui-skill {
+    width: 50%;
+}
+
+.bootstrap-skill {
+    width: 80%;
+}
+
+.jwt-skill {
+    width: 70%;
+}
+
+.nodejs-skill {
+    width: 70%;
+}
+
+.react-skill {
+    width: 60%;
+}
+
+.postman-skill {
+    width: 90%;
+}
+
+.java-skill {
+    width: 50%;
+}
+
+.tailwind-skill {
+    width: 50%;
+}
+
+.javaFX-skill {
+    width: 30%;
 }
 
 /* Educación */
