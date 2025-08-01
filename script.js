@@ -118,6 +118,46 @@ document.addEventListener('DOMContentLoaded', () => {
             closeModal();
         }
     })
+
+    const skillsSection = document.getElementById('habilidades');
+    const skillBars = document.querySelectorAll('.skill-bar');
+
+    const options = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.5
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                skillBars.forEach(bar => {
+                    const percent = bar.getAttribute('data-percent');
+                    const span = bar.querySelector('.skill-percent');
+
+                    bar.style.width = `${percent}%`;
+
+                    let currentPercent = 0;
+                    const interval = setInterval(() => {
+                        if (currentPercent >= percent) {
+                            clearInterval(interval);
+                            return;
+                        }
+                        currentPercent++;
+                        span.textContent = `${currentPercent}%`;
+                    }, 20)
+                })
+            } else {
+                skillBars.forEach(bar => {
+                    bar.style.width = `0%`;
+                    const span = bar.querySelector('.skill-percent');
+                    span.textContent = `0%`;
+                })
+            }
+        })
+    }, options)
+
+    observer.observe(skillsSection);
 })
 
 window.onscroll = function () {
