@@ -456,6 +456,10 @@ nav.nav_menu a.active {
     margin-bottom: 2rem;
 }
 
+.skill-info .stars {
+    font-size: 2rem;
+}
+
 .skill-info img {
     width: 6rem;
     margin-bottom: 1rem;
