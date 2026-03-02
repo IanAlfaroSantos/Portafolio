@@ -1,10 +1,8 @@
-
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { PROJECTS } from '../constants';
 
-const ProjectCard = ({ project, index }) => {
+const ProjectCard = ({ project, index, onOpen }) => {
   const [currentImg, setCurrentImg] = useState(0);
-  const [isOpen, setIsOpen] = useState(false);
 
   const nextImg = (e) => {
     e.stopPropagation();
@@ -17,38 +15,58 @@ const ProjectCard = ({ project, index }) => {
   }
 
   return (
-    <div className="group glass-card flex flex-col h-full hover:-translate-y-2 transition-all duration-500 overflow-hidden" data-aos="fade-up" data-aos-delay={index * 80}>
-      <div className={`relative overflow-hidden bg-black/40 ${project.featured ? "h-96" : "h-64"}`}>
-        <img
-          src={project.images[currentImg]}
-          alt={project.title}
-          onClick={() => setIsOpen(true)}
-          className="cursor-pointer w-full h-full object-contain transition-all duration-1000 group-hover:scale-110"
-          onError={(e) => (e.currentTarget.src = 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1000&auto=format&fit=crop')}
-        />
+    <div
+      className="group glass-card flex flex-col h-full hover:-translate-y-2 transition-all duration-500 overflow-hidden"
+      data-aos="fade-up"
+      data-aos-delay={index * 80}
+    >
+      <div className={`relative overflow-hidden bg-black/40 ${project.featured ? 'h-96' : 'h-64'}`}>
+        <div
+          onClick={() => onOpen(project, currentImg)}
+          className="cursor-zoom-in w-full h-full transition-transform duration-500 ease-out"
+        >
+          <img
+            src={project.images[currentImg]}
+            alt={project.title}
+            className="w-full h-full object-contain"
+            onError={(e) =>
+            (e.currentTarget.src =
+              'https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1000&auto=format&fit=crop')
+            }
+          />
+        </div>
 
-        <div className="absolute inset-0 flex items-center justify-between px-4 opacity-0 group-hover:opacity-100 transition-opacity">
+        <div className="absolute top-4 right-4 w-10 h-10 rounded-full bg-black/60 text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
+          <i className="fas fa-search-plus text-sm"></i>
+        </div>
+
+        <div className="absolute inset-0 flex items-center justify-between px-4 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
           <button
             onClick={prevImg}
-            className="w-10 h-10 rounded-full bg-dark-bg/80 border border-white/10 text-white flex items-center justify-center hover:bg-primary transition-all active:scale-90"
+            className="pointer-events-auto w-10 h-10 rounded-full bg-dark-bg/80 border border-white/10 text-white flex items-center justify-center hover:bg-primary transition-all active:scale-90"
           >
             <i className="fas fa-chevron-left text-xs"></i>
           </button>
+
           <button
             onClick={nextImg}
-            className="w-10 h-10 rounded-full bg-dark-bg/80 border border-white/10 text-white flex items-center justify-center hover:bg-primary transition-all active:scale-90"
+            className="pointer-events-auto w-10 h-10 rounded-full bg-dark-bg/80 border border-white/10 text-white flex items-center justify-center hover:bg-primary transition-all active:scale-90"
           >
             <i className="fas fa-chevron-right text-xs"></i>
           </button>
         </div>
 
-        <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-1.5 px-3 py-1.5 rounded-full bg-black/40 backdrop-blur-md">
+        <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-1.5 px-3 py-1.5 rounded-full bg-black/40 backdrop-blur-md pointer-events-none">
           {project.images.map((_, i) => (
             <button
               key={i}
-              onClick={(e) => { e.stopPropagation(); setCurrentImg(i); }}
-              className={`h-1 rounded-full transition-all duration-300 ${i === currentImg ? 'bg-primary w-6' : 'bg-white/20 w-1.5'}`}
-            ></button>
+              onClick={(e) => {
+                e.stopPropagation();
+                setCurrentImg(i);
+              }}
+              className={`pointer-events-auto h-1 rounded-full transition-all duration-300 ${i === currentImg ? 'bg-primary w-6' : 'bg-white/20 w-1.5'
+                }`}
+            />
           ))}
         </div>
       </div>
@@ -65,6 +83,7 @@ const ProjectCard = ({ project, index }) => {
             </span>
           )}
         </div>
+
         <p className="text-white/40 text-xs mb-8 leading-relaxed font-medium flex-grow whitespace-pre-line">
           {project.description}
         </p>
@@ -75,7 +94,11 @@ const ProjectCard = ({ project, index }) => {
             {project.skills.map((skill, i) => (
               <div key={i} className="flex flex-col items-center gap-1 group/skill">
                 <div className="w-10 h-10 glass-card p-2.5 bg-white/[0.02] border-white/5 group-hover/skill:bg-primary/20 transition-all">
-                  <img src={skill.icon} alt={skill.name} className="w-full h-full object-contain transition-all duration-300 group-hover/skill:scale-150 group-hover/skill:drop-shadow-lg" />
+                  <img
+                    src={skill.icon}
+                    alt={skill.name}
+                    className="w-full h-full object-contain transition-all duration-300 group-hover/skill:scale-175 group-hover/skill:drop-shadow-lg"
+                  />
                 </div>
                 <span className="text-[8px] font-bold text-white/20 uppercase tracking-tighter group-hover/skill:text-white/60 transition-colors">
                   {skill.name}
@@ -90,6 +113,7 @@ const ProjectCard = ({ project, index }) => {
             <a
               href={project.github}
               target="_blank"
+              rel="noreferrer"
               className="py-3 bg-white/5 rounded-xl text-center text-[10px] font-bold text-white uppercase tracking-widest hover:bg-white/10 transition-all border border-white/5"
             >
               Ver en GitHub <i className="fab fa-github ml-1"></i>
@@ -99,6 +123,7 @@ const ProjectCard = ({ project, index }) => {
             <a
               href={project.preview}
               target="_blank"
+              rel="noreferrer"
               className="py-3 bg-primary/20 rounded-xl text-center text-[10px] font-bold text-primary uppercase tracking-widest hover:bg-primary/30 transition-all border border-primary/20"
             >
               Vista Previa <i className="fas fa-external-link-alt ml-1"></i>
@@ -106,55 +131,61 @@ const ProjectCard = ({ project, index }) => {
           )}
         </div>
       </div>
-      {isOpen && (
-        <div
-          className="fixed inset-0 bg-black/80 backdrop-blur-sm flex items-center justify-center z-50"
-          onClick={() => setIsOpen(false)}
-        >
-          <div
-            className="relative max-w-6xl w-full px-6"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <img
-              src={project.images[currentImg]}
-              alt={project.title}
-              className="w-full max-h-[85vh] object-contain rounded-xl"
-            />
-
-            <button
-              onClick={() => setIsOpen(false)}
-              className="absolute -top-12 right-6 text-white text-3xl hover:text-primary transition"
-            >
-              ✕
-            </button>
-
-            {project.images.length > 1 && (
-              <>
-                <button
-                  onClick={prevImg}
-                  className="absolute left-4 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-primary w-12 h-12 rounded-full flex items-center justify-center text-white transition"
-                >
-                  ‹
-                </button>
-
-                <button
-                  onClick={nextImg}
-                  className="absolute right-4 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-primary w-12 h-12 rounded-full flex items-center justify-center text-white transition"
-                >
-                  ›
-                </button>
-              </>
-            )}
-          </div>
-        </div>
-      )}
     </div>
   )
 }
 
 const Projects = () => {
-  const featuredProjects = PROJECTS.filter(p => p.featured);
-  const normalProjects = PROJECTS.filter(p => !p.featured);
+  const featuredProjects = PROJECTS.filter((p) => p.featured);
+  const normalProjects = PROJECTS.filter((p) => !p.featured);
+
+  const [lightbox, setLightbox] = useState({
+    open: false,
+    project: null,
+    imgIndex: 0
+  })
+
+  const openLightbox = (project, imgIndex = 0) => {
+    setLightbox({ open: true, project, imgIndex });
+  }
+
+  const closeLightbox = () => {
+    setLightbox({ open: false, project: null, imgIndex: 0 });
+  }
+
+  const nextLightbox = () => {
+    setLightbox((s) => ({
+      ...s,
+      imgIndex: (s.imgIndex + 1) % s.project.images.length
+    }))
+  }
+
+  const prevLightbox = () => {
+    setLightbox((s) => ({
+      ...s,
+      imgIndex: (s.imgIndex - 1 + s.project.images.length) % s.project.images.length
+    }))
+  }
+
+  useEffect(() => {
+    if (!lightbox.open) return;
+
+    const prevOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+
+    const onKeyDown = (e) => {
+      if (e.key === 'Escape') closeLightbox();
+      if (e.key === 'ArrowRight') nextLightbox();
+      if (e.key === 'ArrowLeft') prevLightbox();
+    }
+
+    window.addEventListener('keydown', onKeyDown);
+
+    return () => {
+      document.body.style.overflow = prevOverflow;
+      window.removeEventListener('keydown', onKeyDown);
+    }
+  }, [lightbox.open])
 
   return (
     <section id="proyectos" className="py-32 bg-dark-bg">
@@ -169,18 +200,72 @@ const Projects = () => {
         {featuredProjects.length > 0 && (
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16" data-aos="fade-up">
             {featuredProjects.map((project, idx) => (
-              <ProjectCard key={`featured-${idx}`} project={project} index={idx} />
+              <ProjectCard
+                key={`featured-${idx}`}
+                project={project}
+                index={idx}
+                onOpen={openLightbox}
+              />
             ))}
           </div>
         )}
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-32" data-aos="fade-up">
           {normalProjects.map((project, idx) => (
-            <ProjectCard key={`normal-${idx}`} project={project} index={idx} />
+            <ProjectCard key={`normal-${idx}`} project={project} index={idx} onOpen={openLightbox} />
           ))}
         </div>
-
       </div>
+
+      {lightbox.open && lightbox.project && (
+        <div
+          className="fixed inset-0 z-[9999] bg-black/90 backdrop-blur-md flex items-center justify-center animate-fadeIn"
+          onClick={closeLightbox}
+        >
+          <div className="relative w-full h-full flex items-center justify-center px-6">
+            <img
+              src={lightbox.project.images[lightbox.imgIndex]}
+              alt={lightbox.project.title}
+              className="max-w-[95vw] max-h-[90vh] object-contain rounded-xl shadow-2xl animate-zoomIn"
+              onClick={(e) => e.stopPropagation()}
+            />
+
+            <button
+              onClick={(e) => {
+                e.stopPropagation();
+                closeLightbox();
+              }}
+              className="absolute top-6 right-6 text-white text-4xl hover:text-primary transition"
+            >
+              ✕
+            </button>
+
+            {lightbox.project.images.length > 1 && (
+              <>
+                <button
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    prevLightbox();
+                  }}
+                  className="absolute left-6 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-primary w-14 h-14 rounded-full flex items-center justify-center text-white text-2xl transition"
+                >
+                  ‹
+                </button>
+
+                <button
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    nextLightbox();
+                  }}
+                  className="absolute right-6 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-primary w-14 h-14 rounded-full flex items-center justify-center text-white text-2xl transition"
+                >
+                  ›
+                </button>
+              </>
+            )}
+          </div>
+        </div>
+      )}
     </section>
   )
 }
