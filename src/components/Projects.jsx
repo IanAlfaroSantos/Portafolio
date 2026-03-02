@@ -18,7 +18,7 @@ const ProjectCard = ({ project, index }) => {
 
   return (
     <div className="group glass-card flex flex-col h-full hover:-translate-y-2 transition-all duration-500 overflow-hidden" data-aos="fade-up" data-aos-delay={index * 80}>
-      <div className="relative h-64 overflow-hidden bg-black/40">
+      <div className={`relative overflow-hidden bg-black/40 ${project.featured ? "h-96" : "h-64"}`}>
         <img
           src={project.images[currentImg]}
           alt={project.title}
@@ -54,9 +54,17 @@ const ProjectCard = ({ project, index }) => {
       </div>
 
       <div className="p-8 flex flex-col flex-grow">
-        <h4 className="text-2xl font-black text-white mb-3 tracking-tight group-hover:vivid-gradient transition-all">
-          {project.title}
-        </h4>
+        <div className="flex items-center justify-between gap-3 mb-3">
+          <h4 className="text-2xl font-black text-white tracking-tight group-hover:vivid-gradient transition-all">
+            {project.title}
+          </h4>
+
+          {project.featured && (
+            <span className="text-[9px] font-black uppercase tracking-[0.2em] px-3 py-1 rounded-full bg-primary/20 text-primary border border-primary/30">
+              Destacado ⭐
+            </span>
+          )}
+        </div>
         <p className="text-white/40 text-xs mb-8 leading-relaxed font-medium flex-grow whitespace-pre-line">
           {project.description}
         </p>
@@ -67,7 +75,7 @@ const ProjectCard = ({ project, index }) => {
             {project.skills.map((skill, i) => (
               <div key={i} className="flex flex-col items-center gap-1 group/skill">
                 <div className="w-10 h-10 glass-card p-2.5 bg-white/[0.02] border-white/5 group-hover/skill:bg-primary/20 transition-all">
-                  <img src={skill.icon} alt={skill.name} className="w-full h-full object-contain filter grayscale group-hover/skill:grayscale-0 transition-all" />
+                  <img src={skill.icon} alt={skill.name} className="w-full h-full object-contain transition-all duration-300 group-hover/skill:scale-150 group-hover/skill:drop-shadow-lg" />
                 </div>
                 <span className="text-[8px] font-bold text-white/20 uppercase tracking-tighter group-hover/skill:text-white/60 transition-colors">
                   {skill.name}
@@ -107,14 +115,12 @@ const ProjectCard = ({ project, index }) => {
             className="relative max-w-6xl w-full px-6"
             onClick={(e) => e.stopPropagation()}
           >
-            {/* Imagen grande */}
             <img
               src={project.images[currentImg]}
               alt={project.title}
               className="w-full max-h-[85vh] object-contain rounded-xl"
             />
 
-            {/* Botón cerrar */}
             <button
               onClick={() => setIsOpen(false)}
               className="absolute -top-12 right-6 text-white text-3xl hover:text-primary transition"
@@ -122,7 +128,6 @@ const ProjectCard = ({ project, index }) => {
               ✕
             </button>
 
-            {/* Flechas */}
             {project.images.length > 1 && (
               <>
                 <button
@@ -148,6 +153,9 @@ const ProjectCard = ({ project, index }) => {
 }
 
 const Projects = () => {
+  const featuredProjects = PROJECTS.filter(p => p.featured);
+  const normalProjects = PROJECTS.filter(p => !p.featured);
+
   return (
     <section id="proyectos" className="py-32 bg-dark-bg">
       <div className="container mx-auto px-6">
@@ -158,9 +166,17 @@ const Projects = () => {
           </h2>
         </div>
 
+        {featuredProjects.length > 0 && (
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16" data-aos="fade-up">
+            {featuredProjects.map((project, idx) => (
+              <ProjectCard key={`featured-${idx}`} project={project} index={idx} />
+            ))}
+          </div>
+        )}
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-32" data-aos="fade-up">
-          {PROJECTS.map((project, idx) => (
-            <ProjectCard key={idx} project={project} index={idx} />
+          {normalProjects.map((project, idx) => (
+            <ProjectCard key={`normal-${idx}`} project={project} index={idx} />
           ))}
         </div>
 
