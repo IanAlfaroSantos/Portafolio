@@ -25,7 +25,7 @@ const Quote = () => {
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
 export default Quote;

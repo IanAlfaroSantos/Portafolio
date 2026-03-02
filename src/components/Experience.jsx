@@ -12,7 +12,7 @@ const Experience = () => {
             Educación y <span className="text-gradient-vivid">Experiencia</span>
           </h2>
         </div>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {EXPERIENCE.map((item, i) => (
             <div key={i} className="glass-panel p-6 rounded-2xl hover:border-primary/30 transition-all group" data-aos="fade-up" data-aos-delay={i * 80}>
@@ -31,7 +31,7 @@ const Experience = () => {
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
 export default Experience;

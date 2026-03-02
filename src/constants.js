@@ -34,12 +34,14 @@ export const EXPERIENCE = [
   { title: 'Desarrollo Frontend', year: '2024 - 2025', description: 'Fundación Kinal Guatemala', icon: '/assets/images/icon-react.jpg' },
   { title: 'Desarrollador Web Full-Stack', year: '2024 - 2025', description: 'Fundación Kinal Guatemala', icon: '/assets/images/icon-jwt.png' },
   { title: 'Desarrollo página web de un catalogo y pedidos de productos', year: '2025', description: 'InnovaQ', icon: '/assets/images/0 InnovaQ.png' },
+  { title: 'Desarrollo ChatBot', year: '2025-2026', description: 'Sistems Enterprise S.A.', icon: '/assets/images/senia_sentada.png' },
+  { title: 'Modificación exportaciones CRM-Dolibarr', year: '2025-2026', description: 'Sistems Enterprise S.A.', icon: '/assets/images/logo_sencom_original.png' },
 ];
 
 export const PROJECTS = [
   {
     title: 'Proyecto SuperKinal',
-    description: 'Este proyecto es un programa desarrollado con JavaFX, que su objetivo es crear una aplicación que facilite la gestión de una tienda.',
+    description: 'Sistema de gestión para una tienda que permite administrar productos, clientes, ventas e inventario. Facilita el control de las operaciones diarias y mantiene organizada la información del negocio.',
     images: ['/assets/images/0 SuperKinal.png', '/assets/images/1 SuperKinal.png', '/assets/images/2 SuperKinal.png', '/assets/images/3 SuperKinal.png'],
     skills: [
       { name: 'Java', icon: '/assets/images/icon-java.png' },
@@ -51,7 +53,7 @@ export const PROJECTS = [
   },
   {
     title: 'Proyecto Giff',
-    description: 'Este proyecto es una API de GIFs que permite a los usuarios buscar GIFs de personajes de películas, animes, caricaturas, entre otros.',
+    description: 'Aplicación web que permite buscar y visualizar GIFs en tiempo real mediante una API externa. Cuenta con búsqueda dinámica y diseño adaptable a diferentes dispositivos.',
     images: ['/assets/images/0 GiffApp.png', '/assets/images/1 GiffApp.png', '/assets/images/3 GiffApp.png'],
     skills: [
       { name: 'React', icon: '/assets/images/icon-react.jpg' },
@@ -65,7 +67,7 @@ export const PROJECTS = [
   },
   {
     title: 'Proyecto Pokemon',
-    description: 'Este proyecto es una API de Pokémon que permite a los usuarios buscar el nombre de cualquier Pokémon y consultar sus propiedades en detalle.',
+    description: 'Aplicación interactiva que permite consultar información de Pokémon mediante búsquedas. Muestra datos relevantes de forma clara y rápida utilizando información obtenida de una API pública.',
     images: ['/assets/images/0 Pokemon.png', '/assets/images/1 Pokemon.png', '/assets/images/3 Pokemon.png'],
     skills: [
       { name: 'React', icon: '/assets/images/icon-react.jpg' },
@@ -79,7 +81,7 @@ export const PROJECTS = [
   },
   {
     title: 'Proyecto Marvel',
-    description: 'Este proyecto es una API de Marvel que muestra todas las versiones de los personajes de Marvel, con opciones de paginación y búsqueda.',
+    description: 'Aplicación web que muestra personajes de Marvel con opciones de búsqueda y navegación por páginas. Permite explorar información de forma organizada y sencilla.',
     images: ['/assets/images/0 Marvel.png', '/assets/images/1 Marvel.png', '/assets/images/2 Marvel.png'],
     skills: [
       { name: 'React', icon: '/assets/images/icon-react.jpg' },
@@ -93,7 +95,7 @@ export const PROJECTS = [
   },
   {
     title: 'Proyecto Spotify',
-    description: 'Este proyecto es una API de Spotify que permite a los usuarios buscar por nombre de grupo, artista, canción o incluso álbum. Además, ofrece la opción de reproducir una parte de la canción.',
+    description: 'Aplicación que integra los servicios de Spotify para buscar artistas, canciones y álbumes, incluyendo reproducción de fragmentos de audio. Utiliza autenticación para acceder a contenido protegido.',
     images: ['/assets/images/0 Spotify.png', '/assets/images/1 Spotify.png', '/assets/images/2 Spotify.png', '/assets/images/3 Spotify.png'],
     skills: [
       { name: 'React', icon: '/assets/images/icon-react.jpg' },
@@ -107,7 +109,7 @@ export const PROJECTS = [
   },
   {
     title: 'Proyecto Almacenadora',
-    description: 'Este proyecto está diseñado para la gestión de una almacén, permitiendo a administradores y empleados llevar un control eficiente sobre el inventario, clientes y proveedores.',
+    description: 'Sistema completo para la gestión de inventario, clientes y proveedores. Incluye inicio de sesión seguro y una estructura cliente-servidor para manejar la información de forma eficiente.',
     images: ['/assets/images/0 Storage.png', '/assets/images/1 Storage.png', '/assets/images/2 Storage.png', '/assets/images/3 Storage.png', '/assets/images/4 storage.png'],
     skills: [
       { name: 'React', icon: '/assets/images/icon-react.jpg' },
@@ -128,7 +130,7 @@ export const PROJECTS = [
   },
   {
     title: 'Proyecto Blog',
-    description: 'Este proyecto es una plataforma de gestión de publicaciones que permite a los profesores compartir material, facilitando el estudio eficiente.',
+    description: 'Plataforma web para crear y administrar publicaciones. Permite a los usuarios registrarse, iniciar sesión y gestionar contenido según sus permisos.',
     images: ['/assets/images/0 Blog.png', '/assets/images/1 Blog.png', '/assets/images/2 Blog.png', '/assets/images/3 Blog.png', '/assets/images/4 Blog.png'],
     skills: [
       { name: 'React', icon: '/assets/images/icon-react.jpg' },
@@ -149,7 +151,7 @@ export const PROJECTS = [
   },
   {
     title: 'Proyecto Hotelera',
-    description: 'Sistema de gestión de hoteles que permite gestionar habitaciones y salas de eventos, ofreciendo a los usuarios la posibilidad de reservar.',
+    description: 'Sistema de gestión hotelera que permite controlar habitaciones, reservas y eventos. Facilita el seguimiento del estado de las habitaciones y la organización de las reservas.',
     images: ['/assets/images/0 Hotelera.png', '/assets/images/1 Hotelera.png', '/assets/images/5 Hotelera.png', '/assets/images/2 Hotelera.png', '/assets/images/3 Hotelera.png', '/assets/images/4 Hotelera.png'],
     skills: [
       { name: 'React', icon: '/assets/images/icon-react.jpg' },
@@ -171,7 +173,7 @@ export const PROJECTS = [
   },
   {
     title: 'Proyecto Banking System',
-    description: 'Sistema bancario para gestión de clientes, cuentas, créditos y transferencias, con notificaciones por correo electrónico.',
+    description: 'Sistema bancario full-stack que permite gestión de clientes, cuentas, créditos y transferencias. Implementa autenticación JWT, envío de notificaciones por correo electrónico y arquitectura REST escalable.',
     images: ['/assets/images/0 Banco.png', '/assets/images/1 Banco.png', '/assets/images/3 Banco.png', '/assets/images/4 Banco.png', '/assets/images/5 Banco.png', '/assets/images/6 Banco.png', '/assets/images/7 Banco.png', '/assets/images/8 Banco.png'],
     skills: [
       { name: 'React', icon: '/assets/images/icon-react.jpg' },
@@ -190,5 +192,50 @@ export const PROJECTS = [
     ],
     github: 'https://github.com/KevinDGutierrez/Banking-System-Frontend.git',
     preview: 'https://banking-system-frontend-beige.vercel.app/'
+  },
+  {
+    title: 'Sen-IA ChatBot Inteligente Conectado a Dolibarr CRM',
+    description: `Sen-IA es un chatbot inteligente desarrollado para atención automatizada de clientes, disponible tanto en Web Chat como en WhatsApp mediante la API oficial de Meta (WhatsApp Business Platform).
+
+    El sistema está desplegado en Google Cloud e integra:
+
+    • Dialogflow para la gestión de intenciones y flujos conversacionales.  
+    • Gemini 1.5 para el procesamiento inteligente de lenguaje natural y generación de respuestas para preguntas directas del cliente.
+
+    Funcionalidades principales:
+
+    ✅ Atención automática a clientes vía WhatsApp y Web.  
+    ✅ Registro automático de clientes como terceros dentro de Dolibarr CRM.  
+    ✅ Creación automática de tickets de soporte vinculados al cliente.  
+    ✅ Envío de correos electrónicos automáticos al cliente con confirmación de ticket.  
+    ✅ Notificación por correo a los asesores cuando se genera un nuevo caso.  
+    ✅ Consulta de información sobre soluciones y servicios.  
+    ✅ Integración mediante API REST para sincronización en tiempo real con el CRM.
+
+    Valor del Proyecto:
+
+    El sistema optimiza la atención al cliente, reduce tiempos de respuesta y automatiza procesos administrativos dentro del CRM, mejorando la atención de solicitudes y la comunicación entre clientes y asesores.`,
+    images: ['/assets/images/crm1.png', '/assets/images/crm2.png', '/assets/images/crm3.png', '/assets/images/crm4.png', '/assets/images/crm5.png', '/assets/images/crm6.png', '/assets/images/crm7.png', '/assets/images/crm8.png'],
+    skills: [
+      { name: 'React', icon: '/assets/images/icon-react.jpg' },
+      { name: 'Axios', icon: '/assets/images/icon-axios.webp' },
+      { name: 'Material UI', icon: '/assets/images/icon-material_ui.png' },
+      { name: 'JavaScript', icon: '/assets/images/icon-js.png' },
+      { name: 'NodeJS', icon: '/assets/images/icon-nodejs.png' },
+      { name: 'GitHub', icon: '/assets/images/icon-github.png' },
+      { name: 'HTML', icon: '/assets/images/icon-html.png' },
+      { name: 'Bootstrap', icon: '/assets/images/icon-bootstrap.png' },
+      { name: 'Tailwind', icon: '/assets/images/icon-tailwind.png' },
+      { name: 'CSS', icon: '/assets/images/icon-css.png' },
+      { name: 'Dolibarr CRM', icon: '/assets/images/icon-dolibarr.png' },
+      { name: 'Whatsapp API', icon: '/assets/images/icon-whatsapp.png' },
+      { name: 'Google Cloud', icon: '/assets/images/icon-google-cloud.png' },
+      { name: 'Inteligencia Artificial', icon: '/assets/images/icon-ia.webp' },
+      { name: 'Web Chat', icon: '/assets/images/icon-webchat.webp' },
+      { name: 'ChatBots', icon: '/assets/images/logo_sencom.png' },
+      { name: 'API REST', icon: '/assets/images/icon-apirest.png' },
+      { name: 'Gemini 1.5', icon: '/assets/images/icon-gemini.png' }
+    ],
+    preview: 'https://sencom-chatbot.vercel.app/'
   }
-];
+]

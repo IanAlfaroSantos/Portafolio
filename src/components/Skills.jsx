@@ -10,10 +10,10 @@ const SkillItem = ({ skill, isVisible, index }) => {
     if (isVisible) {
       let start = 0;
       const end = skill.percent;
-      const duration = 4000; 
+      const duration = 4000;
       const fps = 60;
       const increment = end / (duration / 1000 * fps);
-      
+
       timer = window.setInterval(() => {
         start += increment;
         if (start >= end) {
@@ -24,13 +24,13 @@ const SkillItem = ({ skill, isVisible, index }) => {
         }
       }, 1000 / fps);
     } else {
-      setCount(0); // Reset instantáneo al salir de vista
+      setCount(0);
     }
     return () => clearInterval(timer);
   }, [isVisible, skill.percent]);
 
   return (
-    <div 
+    <div
       className={`relative group transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
       style={{ transitionDelay: `${index * 50}ms` }}
       data-aos="fade-up"
@@ -39,44 +39,43 @@ const SkillItem = ({ skill, isVisible, index }) => {
       <div className="glass-card p-8 group-hover:bg-white/[0.05]">
         <div className="flex justify-between items-start mb-6">
           <div className="flex items-center gap-4">
-             <div className="w-14 h-14 bg-white/5 rounded-2xl flex items-center justify-center p-3 group-hover:bg-primary/20 transition-colors">
-                <img 
-                  src={skill.icon} 
-                  alt={skill.name} 
-                  className="w-full h-full object-contain filter brightness-100 group-hover:scale-110 transition-transform" 
-                  onError={(e) => (e.currentTarget.src = 'https://cdn-icons-png.flaticon.com/512/606/606204.png')}
-                />
-             </div>
-             <div>
-                <h4 className="text-white font-bold text-lg mb-1">{skill.name}</h4>
-                <div className="text-[10px] flex gap-0.5">
-                   {Array.from({ length: 5 }).map((_, i) => (
-                     <span key={i} className={`${i < skill.stars ? 'text-yellow-400' : 'text-white/10'}`}>⭐</span>
-                   ))}
-                </div>
-             </div>
+            <div className="w-14 h-14 bg-white/5 rounded-2xl flex items-center justify-center p-3 group-hover:bg-primary/20 transition-colors">
+              <img
+                src={skill.icon}
+                alt={skill.name}
+                className="w-full h-full object-contain filter brightness-100 group-hover:scale-110 transition-transform"
+                onError={(e) => (e.currentTarget.src = 'https://cdn-icons-png.flaticon.com/512/606/606204.png')}
+              />
+            </div>
+            <div>
+              <h4 className="text-white font-bold text-lg mb-1">{skill.name}</h4>
+              <div className="text-[10px] flex gap-0.5">
+                {Array.from({ length: 5 }).map((_, i) => (
+                  <span key={i} className={`${i < skill.stars ? 'text-yellow-400' : 'text-white/10'}`}>⭐</span>
+                ))}
+              </div>
+            </div>
           </div>
           <span className="text-sm font-black text-primary bg-primary/10 px-3 py-1 rounded-lg tabular-nums">
             {count}%
           </span>
         </div>
-        
+
         <div className="h-2 w-full bg-white/5 rounded-full overflow-hidden relative shadow-inner">
-          <div 
+          <div
             className="h-full bg-gradient-to-r from-primary via-secondary to-accent transition-all ease-linear shadow-[0_0_20px_rgba(168,85,247,0.4)]"
-            style={{ 
+            style={{
               width: isVisible ? `${skill.percent}%` : '0%',
-              transitionDuration: isVisible ? '4000ms' : '0ms' 
+              transitionDuration: isVisible ? '4000ms' : '0ms'
             }}
           >
-            {/* Shimmer Effect */}
             <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent skew-x-12 animate-[shimmer_2s_infinite]"></div>
           </div>
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
 const Skills = () => {
   const sectionRef = useRef(null);
@@ -107,7 +106,7 @@ const Skills = () => {
           ))}
         </div>
       </div>
-      
+
       <style>{`
         @keyframes shimmer {
           0% { transform: translateX(-150%) skewX(-12deg); }
@@ -115,7 +114,7 @@ const Skills = () => {
         }
       `}</style>
     </section>
-  );
-};
+  )
+}
 
 export default Skills;

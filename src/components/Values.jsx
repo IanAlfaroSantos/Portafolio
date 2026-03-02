@@ -12,11 +12,11 @@ const Values = () => {
             Mis Valores <span className="vivid-gradient">Profesionales</span>
           </h2>
         </div>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" data-aos="fade-up">
           {VALUES.map((value, i) => (
-            <div 
-              key={value.title} 
+            <div
+              key={value.title}
               className="group glass-card p-10 hover:bg-white/[0.04] transition-all duration-500"
               data-aos="fade-up"
               data-aos-delay={i * 80}
@@ -35,7 +35,7 @@ const Values = () => {
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
 export default Values;

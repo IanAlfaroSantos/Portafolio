@@ -1,71 +1,69 @@
-
 <!DOCTYPE html>
 <html lang="es" class="scroll-smooth">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portafolio | Ian Alfaro Desarrollador Web">
-    <meta name="robots" content="index,follow">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portafolio | Ian Alfaro Desarrollador Web">
+  <meta name="robots" content="index,follow">
 
-    <title>Ian Alfaro | Desarrollador Web</title>
+  <title>Ian Alfaro | Desarrollador Web</title>
 
-    <!-- Estilos/recursos presentes en el index original -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cooper+Hewitt&family=PT+Sans&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cooper+Hewitt&family=PT+Sans&display=swap" rel="stylesheet">
 
-    <!-- Favicon / Icono -->
-    <link rel="icon" href="/assets/images/LogoPersonal.png" type="image/png" />
-    <link rel="apple-touch-icon" href="/assets/images/LogoPersonal.png" />
+  <link rel="icon" href="/assets/images/LogoPersonal.png" type="image/png" />
+  <link rel="apple-touch-icon" href="/assets/images/LogoPersonal.png" />
 
-    <!-- OpenGraph -->
-    <meta property="og:title" content="Ian Alfaro | Desarrollador Web" />
-    <meta property="og:description" content="Portafolio | Ian Alfaro Desarrollador Web" />
-    <meta property="og:image" content="/assets/images/LogoPersonal.png" />
-    <meta property="og:type" content="website" />
-<script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              'primary': '#a855f7', // Violeta Eléctrico
-              'secondary': '#f472b6', // Rosa Neón
-              'accent': '#22d3ee', // Cian Glacial
-              'dark-bg': '#050505',
-              'card-bg': '#0f0f0f',
+  <meta property="og:title" content="Ian Alfaro | Desarrollador Web" />
+  <meta property="og:description" content="Portafolio | Ian Alfaro Desarrollador Web" />
+  <meta property="og:image" content="/assets/images/LogoPersonal.png" />
+  <meta property="og:type" content="website" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'primary': '#a855f7',
+            'secondary': '#f472b6',
+            'accent': '#22d3ee',
+            'dark-bg': '#050505',
+            'card-bg': '#0f0f0f',
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            display: ['Outfit', 'sans-serif'],
+          },
+          animation: {
+            'gradient-x': 'gradient-x 15s ease infinite',
+            'float': 'float 6s ease-in-out infinite',
+          },
+          keyframes: {
+            'gradient-x': {
+              '0%, 100%': { 'background-size': '200% 200%', 'background-position': 'left center' },
+              '50%': { 'background-size': '200% 200%', 'background-position': 'right center' },
             },
-            fontFamily: {
-              sans: ['Inter', 'sans-serif'],
-              display: ['Outfit', 'sans-serif'],
-            },
-            animation: {
-              'gradient-x': 'gradient-x 15s ease infinite',
-              'float': 'float 6s ease-in-out infinite',
-            },
-            keyframes: {
-              'gradient-x': {
-                '0%, 100%': { 'background-size': '200% 200%', 'background-position': 'left center' },
-                '50%': { 'background-size': '200% 200%', 'background-position': 'right center' },
-              },
-              'float': {
-                '0%, 100%': { transform: 'translateY(0px)' },
-                '50%': { transform: 'translateY(-20px)' },
-              }
+            'float': {
+              '0%, 100%': { transform: 'translateY(0px)' },
+              '50%': { transform: 'translateY(-20px)' },
             }
           }
         }
       }
-    </script>
-    <!-- Tipografías extra para el look "pro" actual -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;600;800;900&display=swap" rel="stylesheet">
-    
-    <style type="text/tailwindcss">
-        @layer base {
+    }
+  </script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;600;800;900&display=swap"
+    rel="stylesheet">
+
+  <style type="text/tailwindcss">
+    @layer base {
           body {
             @apply bg-dark-bg text-gray-400 antialiased overflow-x-hidden;
             font-family: 'Inter', sans-serif;
@@ -118,8 +116,10 @@
         ::-webkit-scrollbar-thumb:hover { background: #a855f7; }
     </style>
 </head>
+
 <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
 </body>
+
 </html>

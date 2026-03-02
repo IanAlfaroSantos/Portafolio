@@ -11,21 +11,20 @@ const Contact = () => {
         method: 'POST',
         body: formData,
         headers: { Accept: 'application/json' },
-      });
+      })
 
       if (response.ok) {
         form.reset();
       }
     } catch {
-      // Sin UI adicional (para mantener el contenido alineado al index.html)
     }
-  };
+  }
 
   const contactInfo = [
     { icon: '/assets/images/icon-telefono.jpg', alt: 'Teléfono', value: '+502 3366 2977', placeholderIcon: 'fa-phone' },
     { icon: '/assets/images/icon-email.png', alt: 'Correo', value: 'ialfasa2020@gmail.com', placeholderIcon: 'fa-envelope' },
     { icon: '/assets/images/icon-map.png', alt: 'Ubicación', value: 'Guatemala', placeholderIcon: 'fa-map-marker-alt' },
-  ];
+  ]
 
   return (
     <section id="contacto" className="py-32 bg-dark-bg relative overflow-hidden">
@@ -109,7 +108,7 @@ const Contact = () => {
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
 export default Contact;

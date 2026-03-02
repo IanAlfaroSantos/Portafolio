@@ -22,7 +22,6 @@ const App = () => {
   }, []);
 
   useEffect(() => {
-    // Animaciones tipo AOS como el index original
     AOS.init({
       duration: 1000,
       once: true,
@@ -51,16 +50,15 @@ const App = () => {
         <Contact />
       </main>
       <Footer />
-      
-      {/* Scroll to Top Button */}
-      <button 
+
+      <button
         onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
         className="fixed bottom-8 right-8 w-12 h-12 bg-gradient-primary rounded-full flex items-center justify-center text-white shadow-lg hover:scale-110 transition-transform z-50 group"
       >
         <i className="fas fa-chevron-up"></i>
       </button>
     </div>
-  );
-};
+  )
+}
 
 export default App;

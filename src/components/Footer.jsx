@@ -8,7 +8,7 @@ const Footer = () => {
     { href: 'https://wa.me/33662977', icon: '/assets/images/icon-whatsapp.png', alt: 'Whatsapp' },
     { href: 'https://www.facebook.com/ian.alfaro.7547/', icon: '/assets/images/icon-facebook.png', alt: 'Whatsapp' },
     { href: 'https://www.instagram.com/ian_alfaro_8273/', icon: '/assets/images/icon-instagram.png', alt: 'Instagram' },
-  ];
+  ]
 
   return (
     <footer className="py-16 bg-dark-bg border-t border-white/5 relative overflow-hidden">
@@ -28,7 +28,7 @@ const Footer = () => {
 
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[1px] bg-gradient-to-r from-transparent via-primary/50 to-transparent"></div>
     </footer>
-  );
-};
+  )
+}
 
 export default Footer;
