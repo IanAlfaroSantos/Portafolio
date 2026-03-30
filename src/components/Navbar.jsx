@@ -40,14 +40,15 @@ const Navbar = () => {
     setIsOpen(false);
     const element = document.querySelector(href);
     if (element) {
-      const top = element.getBoundingClientRect().top + window.scrollY + 30;
+      const top = element.getBoundingClientRect().top + window.scrollY - 80;
       window.scrollTo({ top, behavior: 'smooth' });
     }
   }
 
   return (
-    <header className={`fixed top-0 left-0 w-full z-[100] transition-all duration-300 ${isScrolled ? 'py-3 bg-dark-bg/80 backdrop-blur-xl border-b border-white/5' : 'py-6 bg-transparent'
-      }`}>
+    <>
+      <header className={`fixed top-0 left-0 w-full z-[100] transition-all duration-300 ${isScrolled ? 'py-3 bg-dark-bg/80 backdrop-blur-xl border-b border-white/5' : 'py-6 bg-transparent'
+        }`}>
       <div className="container mx-auto px-6 flex justify-between items-center">
         <a href="#home" onClick={(e) => handleNavClick(e, '#home')} className="flex items-center gap-3 group">
           <div className="w-9 h-9 rounded-xl overflow-hidden bg-white/5 border border-white/10 shadow-lg shadow-primary/10 group-hover:scale-110 transition-transform">
@@ -81,15 +82,30 @@ const Navbar = () => {
           <i className={`fas ${isOpen ? 'fa-times' : 'fa-bars-staggered'}`}></i>
         </button>
       </div>
+    </header>
 
-      <div className={`fixed inset-0 bg-dark-bg z-[90] flex flex-col items-center justify-center gap-8 transition-transform duration-500 md:hidden ${isOpen ? 'translate-y-0' : '-translate-y-full'}`}>
-        {navLinks.map((link) => (
-          <a key={link.name} href={link.href} onClick={(e) => handleNavClick(e, link.href)} className="text-3xl font-black text-white hover:text-primary transition-colors">
+      <div className={`fixed inset-0 bg-dark-bg/95 backdrop-blur-3xl z-[90] flex flex-col items-center justify-center gap-8 transition-transform duration-500 ease-in-out md:hidden ${isOpen ? 'translate-y-0' : '-translate-y-full'}`}>
+        {navLinks.map((link, idx) => (
+          <a
+            key={link.name}
+            href={link.href}
+            onClick={(e) => handleNavClick(e, link.href)}
+            className={`text-3xl font-black transition-all duration-500 transform ${isOpen ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'} ${active === link.href ? 'text-primary' : 'text-white hover:text-primary'}`}
+            style={{ transitionDelay: `${isOpen ? 100 + idx * 50 : 0}ms` }}
+          >
             {link.name}
           </a>
         ))}
+        <a 
+          href="#contacto" 
+          onClick={(e) => handleNavClick(e, '#contacto')} 
+          className={`mt-4 px-8 py-4 bg-gradient-primary rounded-full text-xl font-black text-white shadow-[0_0_30px_rgba(168,85,247,0.3)] transition-all duration-500 transform ${isOpen ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}
+          style={{ transitionDelay: `${isOpen ? 100 + navLinks.length * 50 : 0}ms` }}
+        >
+          Contacto
+        </a>
       </div>
-    </header>
+    </>
   )
 }
 

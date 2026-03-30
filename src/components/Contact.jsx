@@ -27,12 +27,12 @@ const Contact = () => {
   ]
 
   return (
-    <section id="contacto" className="py-32 bg-dark-bg relative overflow-hidden">
+    <section id="contacto" className="py-16 md:py-32 bg-dark-bg relative overflow-hidden">
       <div className="container mx-auto px-6">
-        <div className="flex flex-col lg:flex-row gap-20">
+        <div className="flex flex-col lg:flex-row gap-12 lg:gap-20">
           <div className="lg:w-1/3" data-aos="fade-right">
             <p className="text-primary font-black uppercase tracking-[0.4em] text-[10px] mb-4"></p>
-            <h3 className="text-5xl md:text-6xl font-black text-white mb-8 tracking-tighter">Contacto</h3>
+            <h3 className="text-4xl sm:text-5xl md:text-6xl font-black text-white mb-8 tracking-tighter">Contacto</h3>
             <p className="text-gray-400 mb-12 text-lg leading-relaxed"></p>
 
             <div className="space-y-6">

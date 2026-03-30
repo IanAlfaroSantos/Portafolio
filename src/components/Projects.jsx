@@ -36,27 +36,27 @@ const ProjectCard = ({ project, index, onOpen }) => {
           />
         </div>
 
-        <div className="absolute top-4 right-4 w-10 h-10 rounded-full bg-black/60 text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
+        <div className="absolute top-4 right-4 w-10 h-10 rounded-full bg-black/60 text-white flex items-center justify-center opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity pointer-events-none">
           <i className="fas fa-search-plus text-sm"></i>
         </div>
 
-        <div className="absolute inset-0 flex items-center justify-between px-4 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
+        <div className="absolute inset-0 flex items-center justify-between px-2 sm:px-4 opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity pointer-events-none">
           <button
             onClick={prevImg}
-            className="pointer-events-auto w-10 h-10 rounded-full bg-dark-bg/80 border border-white/10 text-white flex items-center justify-center hover:bg-primary transition-all active:scale-90"
+            className="pointer-events-auto w-8 h-8 md:w-10 md:h-10 rounded-full bg-dark-bg/80 border border-white/10 text-white flex items-center justify-center hover:bg-primary transition-all active:scale-90"
           >
             <i className="fas fa-chevron-left text-xs"></i>
           </button>
 
           <button
             onClick={nextImg}
-            className="pointer-events-auto w-10 h-10 rounded-full bg-dark-bg/80 border border-white/10 text-white flex items-center justify-center hover:bg-primary transition-all active:scale-90"
+            className="pointer-events-auto w-8 h-8 md:w-10 md:h-10 rounded-full bg-dark-bg/80 border border-white/10 text-white flex items-center justify-center hover:bg-primary transition-all active:scale-90"
           >
             <i className="fas fa-chevron-right text-xs"></i>
           </button>
         </div>
 
-        <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-1.5 px-3 py-1.5 rounded-full bg-black/40 backdrop-blur-md pointer-events-none">
+        <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-1.5 px-3 py-1.5 rounded-full bg-black/40 backdrop-blur-md pointer-events-none opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity">
           {project.images.map((_, i) => (
             <button
               key={i}
@@ -188,11 +188,11 @@ const Projects = () => {
   }, [lightbox.open])
 
   return (
-    <section id="proyectos" className="py-32 bg-dark-bg">
+    <section id="proyectos" className="py-16 md:py-32 bg-dark-bg">
       <div className="container mx-auto px-6">
-        <div className="mb-20 text-center" data-aos="fade-right">
+        <div className="mb-12 md:mb-20 text-center" data-aos="fade-right">
           <p className="text-secondary font-bold uppercase tracking-[0.5em] text-[10px] mb-4"></p>
-          <h2 className="text-4xl md:text-8xl font-black text-white tracking-tighter leading-none">
+          <h2 className="text-5xl sm:text-6xl md:text-8xl font-black text-white tracking-tighter leading-none">
             <span className="vivid-gradient">Proyectos</span>
           </h2>
         </div>
@@ -247,7 +247,7 @@ const Projects = () => {
                     e.stopPropagation();
                     prevLightbox();
                   }}
-                  className="absolute left-6 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-primary w-14 h-14 rounded-full flex items-center justify-center text-white text-2xl transition"
+                  className="absolute left-2 sm:left-6 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-primary w-10 h-10 sm:w-14 sm:h-14 rounded-full flex items-center justify-center text-white text-2xl transition"
                 >
                   ‹
                 </button>
@@ -257,7 +257,7 @@ const Projects = () => {
                     e.stopPropagation();
                     nextLightbox();
                   }}
-                  className="absolute right-6 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-primary w-14 h-14 rounded-full flex items-center justify-center text-white text-2xl transition"
+                  className="absolute right-2 sm:right-6 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-primary w-10 h-10 sm:w-14 sm:h-14 rounded-full flex items-center justify-center text-white text-2xl transition"
                 >
                   ›
                 </button>

@@ -12,7 +12,7 @@ const About = () => {
   ]
 
   return (
-    <section id="sobreMi" className="py-32 relative overflow-hidden">
+    <section id="sobreMi" className="py-16 md:py-32 relative overflow-hidden">
       <div className="container mx-auto px-6">
         <div className="grid lg:grid-cols-12 gap-16 items-center">
           <div className="lg:col-span-5 relative" data-aos="fade-right">
@@ -25,9 +25,9 @@ const About = () => {
                 onError={(e) => (e.currentTarget.src = 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1000&auto=format&fit=crop')}
               />
             </div>
-            <div className="absolute -bottom-8 -right-8 glass-card p-8 bg-dark-bg/80 border-primary/30">
-              <span className="block text-4xl font-black vivid-gradient leading-none">Jr.</span>
-              <span className="text-[10px] font-bold text-white/40 uppercase tracking-widest mt-2 block">FullStack Software</span>
+            <div className="absolute -bottom-4 -right-2 sm:-bottom-8 sm:-right-8 glass-card p-4 sm:p-8 bg-dark-bg/80 border-primary/30 shadow-2xl">
+              <span className="block text-2xl sm:text-4xl font-black vivid-gradient leading-none">Jr.</span>
+              <span className="text-[8px] sm:text-[10px] font-bold text-white/40 uppercase tracking-widest mt-1 sm:mt-2 block">FullStack Software</span>
             </div>
           </div>
 
@@ -37,11 +37,11 @@ const About = () => {
               <span className="text-primary font-bold uppercase tracking-widest text-xs"></span>
             </div>
 
-            <h2 className="text-4xl md:text-6xl font-black text-white tracking-tighter mb-10 leading-tight">
+            <h2 className="text-4xl md:text-6xl font-black text-white tracking-tighter mb-8 sm:mb-10 leading-tight">
               Sobre <span className="vivid-gradient">mi</span>
             </h2>
 
-            <p className="text-lg text-white/50 leading-relaxed mb-10 max-w-2xl">
+            <p className="text-base sm:text-lg text-white/50 leading-relaxed mb-10 max-w-2xl">
               Soy Desarrollador <span className="font-semibold text-white">Developer Jr.</span>{' '}
               <span className="font-semibold text-white">"FullStack Software"</span> con una{' '}
               <span className="font-semibold text-white">gran pasión</span> por la tecnología y la programación.

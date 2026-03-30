@@ -88,19 +88,19 @@ const Skills = () => {
   }, []);
 
   return (
-    <section id="habilidades" ref={sectionRef} className="py-32 bg-dark-bg relative overflow-hidden">
+    <section id="habilidades" ref={sectionRef} className="py-16 md:py-32 bg-dark-bg relative overflow-hidden">
       <div className="container mx-auto px-6">
-        <div className="flex flex-col md:flex-row justify-between items-end mb-20 gap-8" data-aos="fade-right">
+        <div className="flex flex-col md:flex-row justify-between items-end mb-12 sm:mb-20 gap-4 sm:gap-8" data-aos="fade-right">
           <div>
-            <p className="text-primary font-bold uppercase tracking-[0.4em] text-[10px] mb-4"></p>
-            <h2 className="text-4xl md:text-7xl font-black text-white tracking-tighter leading-none">
+            <p className="text-primary font-bold uppercase tracking-[0.4em] text-[10px] mb-2 sm:mb-4"></p>
+            <h2 className="text-4xl sm:text-5xl md:text-7xl font-black text-white tracking-tighter leading-none">
               <span className="vivid-gradient">Habilidades</span>
             </h2>
           </div>
           <p className="text-white/20 font-bold uppercase tracking-widest text-[10px] hidden md:block"></p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
           {SKILLS.map((skill, index) => (
             <SkillItem key={skill.name} skill={skill} isVisible={isVisible} index={index} />
           ))}

@@ -10,6 +10,11 @@ module.exports = {
       colors: {
         'brand-blue': '#00c6ff',
         'brand-blue-dark': '#0072ff',
+        'primary': '#8b5cf6',
+        'secondary': '#d946ef',
+        'accent': '#06b6d4',
+        'dark-bg': '#030303',
+        'card-bg': '#0a0a0a',
       },
       animation: {
         'fade-in': 'fadeIn 0.8s ease-out forwards',

@@ -4,11 +4,11 @@ import { EXPERIENCE } from '../constants';
 
 const Experience = () => {
   return (
-    <section id="educacion" className="py-24 bg-dark-bg">
+    <section id="educacion" className="py-16 md:py-24 bg-dark-bg">
       <div className="container mx-auto px-6">
-        <div className="mb-16" data-aos="fade-right">
+        <div className="mb-12 sm:mb-16" data-aos="fade-right">
           <p className="text-primary font-bold uppercase tracking-widest text-[10px] mb-2"></p>
-          <h2 className="text-3xl md:text-5xl font-black text-white tracking-tight">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white tracking-tight">
             Educación y <span className="text-gradient-vivid">Experiencia</span>
           </h2>
         </div>

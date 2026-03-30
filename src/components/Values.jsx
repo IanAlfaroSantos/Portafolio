@@ -4,11 +4,11 @@ import { VALUES } from '../constants';
 
 const Values = () => {
   return (
-    <section id="valores" className="py-32 relative overflow-hidden bg-dark-bg">
+    <section id="valores" className="py-16 md:py-32 relative overflow-hidden bg-dark-bg">
       <div className="container mx-auto px-6 relative z-10">
-        <div className="mb-20" data-aos="fade-right">
+        <div className="mb-12 md:mb-20" data-aos="fade-right">
           <p className="text-accent font-bold uppercase tracking-[0.4em] text-[10px] mb-4"></p>
-          <h2 className="text-4xl md:text-7xl font-black text-white tracking-tighter leading-none">
+          <h2 className="text-4xl sm:text-5xl md:text-7xl font-black text-white tracking-tighter leading-none">
             Mis Valores <span className="vivid-gradient">Profesionales</span>
           </h2>
         </div>
