@@ -83,7 +83,7 @@ export const PROJECTS = [
       { name: 'API REST', icon: '/assets/images/icon-apirest.png' },
       { name: 'Gemini 1.5', icon: '/assets/images/icon-gemini.png' }
     ],
-    preview: 'https://sencom-chatbot.vercel.app/'
+    preview: 'https://wa.me/50223792400'
   },
   {
     title: 'Proyecto Banking System',
