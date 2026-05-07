@@ -40,6 +40,51 @@ export const EXPERIENCE = [
 
 export const PROJECTS = [
   {
+    title: 'Proyecto Chilaquiles Top',
+    featured: true,
+    description: `Chilaquiles Top es una aplicación web de pedidos desarrollada para un restaurante especializado en chilaquiles. El sistema permite a los clientes personalizar sus pedidos seleccionando bases, salsas, proteínas y extras de forma dinámica.
+
+    El proyecto fue desarrollado con un frontend en React y un backend en NodeJS, conectados mediante una API REST para manejar la comunicación y gestión de pedidos en tiempo real.
+
+    Funcionalidades principales:
+
+    ✅ Menú interactivo con personalización de productos
+    ✅ Sistema de autenticación y gestión de usuarios
+    ✅ Carrito de compras y proceso de pedidos
+    ✅ Seguimiento del estado de los pedidos
+    ✅ Integración con WhatsApp para notificaciones y verificación OTP
+    ✅ Panel de administración para productos y pedidos
+    ✅ Diseño responsive para móviles y escritorio
+
+    Este proyecto me permitió fortalecer conocimientos en desarrollo full-stack, integración de APIs, autenticación de usuarios y manejo de estados en aplicaciones web modernas.
+
+    Valor del Proyecto:
+
+    Este proyecto demuestra la capacidad de desarrollar soluciones completas, enfocadas en mejorar la eficiencia operativa y la experiencia del cliente en el sector gastronómico, integrando tecnologías modernas de desarrollo web y servicios de comunicación inteligentes.`,
+    images: [
+      '/assets/images/ch1.png', '/assets/images/ch2.png', '/assets/images/ch3.png', '/assets/images/ch4.png',
+      '/assets/images/ch5.png', '/assets/images/ch6.png', '/assets/images/ch7.png', '/assets/images/ch8.png',
+      '/assets/images/ch16.png',
+      '/assets/images/ch9.png', '/assets/images/ch10.png', '/assets/images/ch11.png', '/assets/images/ch12.png',
+      '/assets/images/ch17.png', '/assets/images/ch18.png',
+      '/assets/images/ch13.png', '/assets/images/ch14.png', '/assets/images/ch15.png'
+    ],
+    skills: [
+      { name: 'React', icon: '/assets/images/icon-react.jpg' },
+      { name: 'NodeJS', icon: '/assets/images/icon-nodejs.png' },
+      { name: 'MongoDB', icon: '/assets/images/icon-mongodb.png' },
+      { name: 'Tailwind', icon: '/assets/images/icon-tailwind.png' },
+      { name: 'Axios', icon: '/assets/images/icon-axios.webp' },
+      { name: 'JavaScript', icon: '/assets/images/icon-js.png' },
+      { name: 'GitHub', icon: '/assets/images/icon-github.png' },
+      { name: 'HTML', icon: '/assets/images/icon-html.png' },
+      { name: 'CSS', icon: '/assets/images/icon-css.png' },
+      { name: 'Whatsapp API', icon: '/assets/images/icon-whatsapp-color.webp' },
+      { name: 'API REST', icon: '/assets/images/icon-apirest.png' }
+    ],
+    preview: 'https://chilaquilestop.com/'
+  },
+  {
     title: 'Sen-IA ChatBot Conectado a Dolibarr CRM',
     featured: true,
     description: `Sen-IA es un chatbot inteligente desarrollado para atención automatizada de clientes, disponible tanto en Web Chat como en WhatsApp mediante la API oficial de Meta (WhatsApp Business Platform).
