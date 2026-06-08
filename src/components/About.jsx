@@ -81,27 +81,15 @@ const About = () => {
 
               {/* Foto sobre mí con escáner */}
               <div className="relative w-full aspect-[4/5] rounded-xl overflow-hidden bg-black/60 border border-white/5 group-hover:border-primary/20 transition-colors animate-glitch-once z-10">
-                {/* Imagen Base */}
+                {/* Imagen Base — escala de grises por defecto, full color en hover */}
                 <img
                   src="/assets/images/Sobre_mi1.jpeg"
                   alt="Ian Alfaro"
-                  className="w-full h-full object-cover grayscale brightness-90 group-hover:opacity-0 transition-opacity duration-300 select-none"
+                  className="w-full h-full object-cover grayscale brightness-90 group-hover:grayscale-0 group-hover:brightness-100 transition-all duration-500 select-none"
                   onError={(e) => { e.currentTarget.src = 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1000&auto=format&fit=crop'; }}
                 />
-
-                {/* Clones de Aberración Cromática Glitch */}
-                <img
-                  src="/assets/images/Sobre_mi1.jpeg"
-                  alt=""
-                  className="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-60 group-hover:animate-glitch-1 filter hue-rotate-90 saturate-150 pointer-events-none"
-                />
-                <img
-                  src="/assets/images/Sobre_mi1.jpeg"
-                  alt=""
-                  className="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-60 group-hover:animate-glitch-2 filter -hue-rotate-90 saturate-150 pointer-events-none"
-                />
                 
-                {/* Línea Láser Escáner y Estela */}
+                {/* Línea Láser Escáner y Estela — siempre visible */}
                 <div className="absolute inset-x-0 top-0 h-[3px] bg-gradient-to-r from-transparent via-primary to-transparent opacity-95 animate-scan pointer-events-none z-20 shadow-[0_0_8px_rgba(0,240,255,0.8),0_0_2px_rgba(0,240,255,0.6)]"></div>
                 <div className="absolute inset-x-0 top-0 h-12 bg-gradient-to-b from-primary/15 to-transparent animate-scan pointer-events-none z-20"></div>
                 
