@@ -10,8 +10,10 @@
   },
   "dependencies": {
     "aos": "^2.3.4",
+    "lucide-react": "^1.17.0",
+    "react": "^19.2.3",
     "react-dom": "^19.2.3",
-    "react": "^19.2.3"
+    "react-router-dom": "^7.17.0"
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^5.0.0",

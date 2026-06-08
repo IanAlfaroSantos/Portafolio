@@ -1,21 +1,117 @@
 
 export const SKILLS = [
-  { name: 'HTML', icon: '/assets/images/icon-html.png', percent: 90, stars: 4 },
-  { name: 'CSS', icon: '/assets/images/icon-css.png', percent: 85, stars: 4 },
-  { name: 'JavaScript', icon: '/assets/images/icon-js.png', percent: 60, stars: 3 },
-  { name: 'Axios', icon: '/assets/images/icon-axios.webp', percent: 90, stars: 4 },
-  { name: 'GitHub', icon: '/assets/images/icon-github.png', percent: 75, stars: 3 },
-  { name: 'MySQL', icon: '/assets/images/icon-mysql.png', percent: 65, stars: 2 },
-  { name: 'MongoDB', icon: '/assets/images/icon-mongodb.png', percent: 75, stars: 3 },
-  { name: 'Material UI', icon: '/assets/images/icon-material_ui.png', percent: 50, stars: 2 },
-  { name: 'Bootstrap', icon: '/assets/images/icon-bootstrap.png', percent: 80, stars: 4 },
-  { name: 'JWT', icon: '/assets/images/icon-jwt.png', percent: 70, stars: 3 },
-  { name: 'NodeJS', icon: '/assets/images/icon-nodejs.png', percent: 70, stars: 3 },
-  { name: 'React', icon: '/assets/images/icon-react.jpg', percent: 60, stars: 3 },
-  { name: 'Postman', icon: '/assets/images/icon-postman.webp', percent: 90, stars: 4 },
-  { name: 'Java', icon: '/assets/images/icon-java.png', percent: 50, stars: 2 },
-  { name: 'Tailwind', icon: '/assets/images/icon-tailwind.png', percent: 50, stars: 3 },
-  { name: 'JavaFX', icon: '/assets/images/icon-javaFX.jpg', percent: 30, stars: 1 },
+  { 
+    name: 'HTML', 
+    icon: '/assets/images/icon-html.png', 
+    percent: 90, 
+    stars: 4,
+    description: 'Estructura fundamental de páginas web, semántica HTML5 y optimización SEO básica. Uso de etiquetas semánticas y buenas prácticas de accesibilidad para garantizar que los sitios web sean legibles por motores de búsqueda y accesibles para todos los usuarios.'
+  },
+  { 
+    name: 'CSS', 
+    icon: '/assets/images/icon-css.png', 
+    percent: 85, 
+    stars: 4,
+    description: 'Diseño y maquetación de interfaces responsivas y atractivas. Dominio de layouts modernos como Flexbox y CSS Grid, animaciones fluidas, transiciones, variables CSS, metodologías como BEM y compatibilidad entre distintos navegadores.'
+  },
+  { 
+    name: 'JavaScript', 
+    icon: '/assets/images/icon-js.png', 
+    percent: 60, 
+    stars: 3,
+    description: 'Programación de lógica e interactividad del lado del cliente. Manipulación del DOM, programación asíncrona (Promises, async/await), consumo de APIs externas mediante fetch y Axios, y manejo modular del código con ES6+.'
+  },
+  { 
+    name: 'Axios', 
+    icon: '/assets/images/icon-axios.webp', 
+    percent: 90, 
+    stars: 4,
+    description: 'Cliente HTTP basado en promesas para consumir servicios y APIs. Configuración de interceptores globales para el manejo automatizado de tokens JWT, manejo estructurado de peticiones, cancelaciones y control centralizado de errores.'
+  },
+  { 
+    name: 'GitHub', 
+    icon: '/assets/images/icon-github.png', 
+    percent: 75, 
+    stars: 3,
+    description: 'Control de versiones colaborativo y gestión de repositorios de código. Manejo de ramas (branching), fusión de código (merging), resolución de conflictos, y flujos de trabajo como GitFlow para asegurar integraciones seguras.'
+  },
+  { 
+    name: 'MySQL', 
+    icon: '/assets/images/icon-mysql.png', 
+    percent: 65, 
+    stars: 2,
+    description: 'Modelado y consulta de bases de datos relacionales. Escritura de queries eficientes, Joins complejos, indexación para optimizar el rendimiento, diseño de diagramas entidad-relación y programación de procedimientos almacenados.'
+  },
+  { 
+    name: 'MongoDB', 
+    icon: '/assets/images/icon-mongodb.png', 
+    percent: 75, 
+    stars: 3,
+    description: 'Gestión de bases de datos NoSQL basadas en documentos. Creación de esquemas flexibles mediante Mongoose, operaciones CRUD avanzadas, pipelines de agregación complejos y optimización de consultas en el stack MERN.'
+  },
+  { 
+    name: 'Material UI', 
+    icon: '/assets/images/icon-material_ui.png', 
+    percent: 50, 
+    stars: 2,
+    description: 'Implementación de sistemas de diseño consistentes y elegantes mediante componentes React prediseñados y personalizables. Uso de temas globales (theming), personalización mediante sx props y maquetación con Material Design.'
+  },
+  { 
+    name: 'Bootstrap', 
+    icon: '/assets/images/icon-bootstrap.png', 
+    percent: 80, 
+    stars: 4,
+    description: 'Maquetación rápida y responsive utilizando la rejilla (grid system) de Bootstrap, utilidades CSS y componentes interactivos prediseñados y listos para producción, minimizando los tiempos de maquetación.'
+  },
+  { 
+    name: 'JWT', 
+    icon: '/assets/images/icon-jwt.png', 
+    percent: 70, 
+    stars: 3,
+    description: 'Implementación de mecanismos de autenticación y autorización seguros en APIs web. Generación, firma y verificación de JSON Web Tokens (JWT) para la protección de endpoints, y almacenamiento seguro en cookies o LocalStorage.'
+  },
+  { 
+    name: 'NodeJS', 
+    icon: '/assets/images/icon-nodejs.png', 
+    percent: 70, 
+    stars: 3,
+    description: 'Desarrollo de servidores y APIs REST robustas y escalables con Express. Control de flujos de middleware, enrutamiento semántico, control de CORS, carga de archivos y comunicación asíncrona con bases de datos relacionales y NoSQL.'
+  },
+  { 
+    name: 'React', 
+    icon: '/assets/images/icon-react.jpg', 
+    percent: 60, 
+    stars: 3,
+    description: 'Desarrollo de aplicaciones de una sola página (SPA) interactivas y modulares. Creación de componentes funcionales reutilizables, gestión de estados (useState, useEffect, useContext) y enrutamiento dinámico.'
+  },
+  { 
+    name: 'Postman', 
+    icon: '/assets/images/icon-postman.webp', 
+    percent: 90, 
+    stars: 4,
+    description: 'Pruebas y documentación interactiva de APIs REST. Creación de colecciones de endpoints, simulación de llamadas HTTP complejas, automatización de scripts de testeo y validación de payloads y códigos de estado HTTP.'
+  },
+  { 
+    name: 'Java', 
+    icon: '/assets/images/icon-java.png', 
+    percent: 50, 
+    stars: 2,
+    description: 'Programación orientada a objetos en entornos estructurados. Implementación de estructuras de datos, colecciones, algoritmos lógicos, herencia, encapsulamiento, polimorfismo y manejo de archivos y excepciones.'
+  },
+  { 
+    name: 'Tailwind', 
+    icon: '/assets/images/icon-tailwind.png', 
+    percent: 50, 
+    stars: 3,
+    description: 'Estilización rápida basada en clases de utilidad directo en el HTML. Permite crear interfaces dinámicas y altamente personalizadas sin salir del código React, manteniendo un bundle css extremadamente ligero y optimizado.'
+  },
+  { 
+    name: 'JavaFX', 
+    icon: '/assets/images/icon-javaFX.jpg', 
+    percent: 30, 
+    stars: 1,
+    description: 'Desarrollo de interfaces gráficas de usuario para aplicaciones de escritorio en Java. Uso de contenedores, layouts, controles de UI y animaciones interactivas utilizando FXML y Scene Builder.'
+  },
 ];
 
 export const VALUES = [
@@ -28,17 +124,138 @@ export const VALUES = [
 ];
 
 export const EXPERIENCE = [
-  { title: 'Desarrollo de aplicaciones con Java', year: '2023', description: 'Fundación Kinal Guatemala', icon: '/assets/images/icon-java.png' },
-  { title: 'Desarrollo de aplicaciones con JavaFX', year: '2024', description: 'Fundación Kinal Guatemala', icon: '/assets/images/icon-javaFX.jpg' },
-  { title: 'Desarrollo Backend', year: '2024 - 2025', description: 'Fundación Kinal Guatemala', icon: '/assets/images/icon-nodejs.png' },
-  { title: 'Desarrollo Frontend', year: '2024 - 2025', description: 'Fundación Kinal Guatemala', icon: '/assets/images/icon-react.jpg' },
-  { title: 'Desarrollador Web Full-Stack', year: '2024 - 2025', description: 'Fundación Kinal Guatemala', icon: '/assets/images/icon-jwt.png' },
-  { title: 'Desarrollo página web de un catalogo y pedidos de productos', year: '2025', description: 'InnovaQ', icon: '/assets/images/0 InnovaQ.png' },
-  { title: 'Desarrollo ChatBot', year: '2025-2026', description: 'Sistems Enterprise S.A.', icon: '/assets/images/senia_sentada.png' },
-  { title: 'Modificación exportaciones CRM-Dolibarr', year: '2025-2026', description: 'Sistems Enterprise S.A.', icon: '/assets/images/logo_sencom_original.png' },
+  { 
+    title: 'Desarrollo de aplicaciones con Java', 
+    year: '2023', 
+    description: 'Fundación Kinal Guatemala', 
+    icon: '/assets/images/icon-java.png',
+    company: 'Fundación Kinal Guatemala',
+    role: 'Estudiante de Programación',
+    longDescription: `Durante este periodo formativo me introduje formalmente en el mundo de la programación orientada a objetos utilizando Java. Desarrollé múltiples proyectos prácticos de consola que me permitieron comprender a fondo conceptos fundamentales como clases, herencia, polimorfismo, interfaces y manejo de excepciones.
+
+    Fue mi primer contacto directo con la estructuración formal de código y la lógica de programación avanzada, sentando las bases esenciales para mi trayectoria como desarrollador de software. Aprendí a pensar algorítmicamente y a organizar mis desarrollos de forma limpia.`,
+    skillsUsed: ['Java', 'GitHub']
+  },
+  { 
+    title: 'Desarrollo de aplicaciones con JavaFX', 
+    year: '2024', 
+    description: 'Fundación Kinal Guatemala', 
+    icon: '/assets/images/icon-javaFX.jpg',
+    company: 'Fundación Kinal Guatemala',
+    role: 'Estudiante de Programación',
+    longDescription: `En esta etapa profundicé en la creación de aplicaciones de escritorio interactivas utilizando la biblioteca JavaFX en combinación con Scene Builder para el diseño visual de interfaces. Desarrollé interfaces enriquecidas con elementos de control modernos y estructuras visuales complejas, interactuando directamente con bases de datos relacionales SQL para registrar, modificar y visualizar información de forma dinámica.
+
+    Esta experiencia mejoró significativamente mi entendimiento sobre el patrón Modelo-Vista-Controlador (MVC) y la correcta separación de responsabilidades en el desarrollo de software.`,
+    skillsUsed: ['Java', 'JavaFX', 'MySQL', 'GitHub']
+  },
+  { 
+    title: 'Desarrollo Backend', 
+    year: '2024 - 2025', 
+    description: 'Fundación Kinal Guatemala', 
+    icon: '/assets/images/icon-nodejs.png',
+    company: 'Fundación Kinal Guatemala',
+    role: 'Desarrollador Backend en Formación',
+    longDescription: `Formación intensiva enfocada en la creación de servicios backend seguros, rápidos y altamente escalables. Aprendí a estructurar servidores HTTP con NodeJS y Express, gestionar bases de datos NoSQL con MongoDB mediante Mongoose, e implementar flujos de seguridad robustos utilizando JSON Web Tokens (JWT) y encriptación de contraseñas.
+
+    Desarrollé la capacidad de diseñar e implementar arquitecturas de APIs REST limpias, documentando endpoints y controlando errores de forma sistemática y ordenada.`,
+    skillsUsed: ['NodeJS', 'MongoDB', 'JWT', 'Postman', 'GitHub']
+  },
+  { 
+    title: 'Desarrollo Frontend', 
+    year: '2024 - 2025', 
+    description: 'Fundación Kinal Guatemala', 
+    icon: '/assets/images/icon-react.jpg',
+    company: 'Fundación Kinal Guatemala',
+    role: 'Desarrollador Frontend en Formación',
+    longDescription: `Periodo dedicado a dominar la construcción de interfaces de usuario modernas, interactivas y responsivas. Aprendí React a profundidad, abarcando el ciclo de vida de componentes, Hooks esenciales, manejo de estados y enrutamiento dinámico. Complementé mis proyectos con frameworks de CSS como Bootstrap y Tailwind para lograr interfaces adaptables y estéticamente atractivas.
+
+    El enfoque principal estuvo en crear experiencias de usuario interactivas de alto rendimiento y consumir APIs REST seguras mediante Axios de forma estructurada.`,
+    skillsUsed: ['React', 'JavaScript', 'HTML', 'CSS', 'Bootstrap', 'Tailwind', 'Axios', 'GitHub']
+  },
+  { 
+    title: 'Desarrollador Web Full-Stack', 
+    year: '2024 - 2025', 
+    description: 'Fundación Kinal Guatemala', 
+    icon: '/assets/images/icon-jwt.png',
+    company: 'Fundación Kinal Guatemala',
+    role: 'Desarrollador Full-Stack en Formación',
+    longDescription: `Consolidación de las destrezas backend y frontend mediante la creación de aplicaciones web completas utilizando el stack MERN. Llevé a cabo la integración de bases de datos estructuradas y no estructuradas, APIs REST seguras y paneles de administración dinámicos e interactivos.
+
+    Esta formación culminó con proyectos de alta complejidad que simulan escenarios del mundo real, mejorando mi capacidad para solucionar problemas en ambas capas de la aplicación y coordinar flujos de datos complejos.`,
+    skillsUsed: ['React', 'NodeJS', 'MongoDB', 'JWT', 'Axios', 'Tailwind', 'GitHub', 'HTML', 'CSS', 'JavaScript']
+  },
+  { 
+    title: 'Desarrollo ChatBot', 
+    year: '2025-2026', 
+    description: 'Sistems Enterprise S.A.', 
+    icon: '/assets/images/senia_sentada.png',
+    company: 'Sistems Enterprise S.A.',
+    role: 'Desarrollador de Inteligencia Artificial / Chatbots',
+    longDescription: `Participé en el desarrollo e implementación del chatbot inteligente 'Sen-IA', integrado con Dialogflow, Gemini 1.5 y WhatsApp Business API de Meta para Sistems Enterprise S.A. Fui responsable de configurar flujos de diálogo interactivos, enlazar intenciones con webhooks del CRM Dolibarr y refinar el procesamiento de lenguaje natural (NLP) para optimizar la interacción con los usuarios.
+
+    Logramos automatizar el registro de leads, creación de tickets y envío de correos electrónicos en tiempo real, impulsando significativamente la productividad comercial y el soporte técnico.`,
+    skillsUsed: ['React', 'NodeJS', 'Axios', 'JavaScript', 'Google Cloud', 'Dolibarr CRM', 'Gemini 1.5', 'GitHub', 'HTML', 'CSS']
+  },
+  { 
+    title: 'Modificación exportaciones CRM-Dolibarr', 
+    year: '2025-2026', 
+    description: 'Sistems Enterprise S.A.', 
+    icon: '/assets/images/logo_sencom_original.png',
+    company: 'Sistems Enterprise S.A.',
+    role: 'Desarrollador de Software',
+    longDescription: `Llevé a cabo la modificación y optimización de los módulos de exportación de datos en el CRM Dolibarr para cumplir con las necesidades específicas de la gerencia comercial en Sistems Enterprise S.A. Ajusté scripts internos del CRM y extendí endpoints de su API REST para garantizar exportaciones limpias de reportes comerciales, cotizaciones y estados de tickets hacia formatos estructurados compatibles con los requerimientos operativos de la empresa.
+
+    Esta tarea requirió un minucioso análisis del modelo de datos del CRM y la optimización de consultas SQL para evitar cuellos de botella en la generación de reportes masivos.`,
+    skillsUsed: ['Dolibarr CRM', 'MySQL', 'NodeJS', 'GitHub']
+  },
 ];
 
 export const PROJECTS = [
+  {
+    title: 'Zenith AI',
+    featured: true,
+    description: `Zenith AI es una plataforma SaaS de prospección B2B automatizada e inteligente diseñada para revolucionar la forma en que las empresas identifican y contactan a clientes potenciales. El sistema integra tecnologías de punta para automatizar por completo la investigación de empresas y la redacción de correos electrónicos fríos personalizados.
+
+    Desarrollada bajo una arquitectura de alto rendimiento, la aplicación combina un frontend de última generación en React y Next.js con un backend robusto en NodeJS y Express, complementado con persistencia NoSQL en MongoDB y consumo optimizado de servicios en la nube.
+
+    Funcionalidades principales:
+
+    ✅ Extracción masiva y automática de prospectos y empresas mediante scraping inteligente.
+    ✅ Análisis semántico de sitios web corporativos en tiempo real utilizando Inteligencia Artificial.
+    ✅ Identificación automatizada de tecnologías, infraestructura y puntos de dolor empresariales.
+    ✅ Redacción de correos electrónicos fríos hiper-personalizados adaptados al perfil de cada prospecto.
+    ✅ Constructor visual de plantillas de correo y gestión interactiva de campañas masivas.
+    ✅ Pipeline comercial y CRM integrado para el seguimiento de leads (Frío, Contactado, Ganado).
+    ✅ Módulos seguros de autenticación JWT y autorización de remitentes mediante tokens.
+    ✅ Dashboard de analíticas avanzadas con tasas de apertura, clics y conversión en tiempo real.
+
+    Valor del Proyecto:
+
+    Este proyecto representa una solución integral de grado empresarial que optimiza el proceso de ventas mediante el uso de inteligencia artificial generativa, resolviendo la ineficiencia del contacto frío tradicional. Demuestra habilidades avanzadas en la integración de modelos de lenguaje grande (LLMs), scraping robusto, persistencia de datos estructurados y el diseño de interfaces de usuario interactivas de alta gama.`,
+    images: [
+      '/assets/images/ze1.png', '/assets/images/ze2.png', '/assets/images/ze3.png', '/assets/images/ze4.png',
+      '/assets/images/ze5.png', '/assets/images/ze6.png', '/assets/images/ze7.png', '/assets/images/ze8.png',
+      '/assets/images/ze9.png', '/assets/images/ze10.png', '/assets/images/ze11.png', '/assets/images/ze12.png',
+      '/assets/images/ze13.png', '/assets/images/ze14.png', '/assets/images/ze15.png', '/assets/images/ze16.png',
+      '/assets/images/ze18.png'
+    ],
+    skills: [
+      { name: 'React', icon: '/assets/images/icon-react.jpg' },
+      { name: 'NodeJS', icon: '/assets/images/icon-nodejs.png' },
+      { name: 'MongoDB', icon: '/assets/images/icon-mongodb.png' },
+      { name: 'Tailwind', icon: '/assets/images/icon-tailwind.png' },
+      { name: 'Axios', icon: '/assets/images/icon-axios.webp' },
+      { name: 'JavaScript', icon: '/assets/images/icon-js.png' },
+      { name: 'GitHub', icon: '/assets/images/icon-github.png' },
+      { name: 'HTML', icon: '/assets/images/icon-html.png' },
+      { name: 'CSS', icon: '/assets/images/icon-css.png' },
+      { name: 'JWT', icon: '/assets/images/icon-jwt.png' },
+      { name: 'Inteligencia Artificial', icon: '/assets/images/icon-ia.webp' },
+      { name: 'API REST', icon: '/assets/images/icon-apirest.png' }
+    ],
+    github: 'https://github.com/IanAlfaroSantos/Zenith-AI.git',
+    preview: 'https://prospeccion-12ca0.web.app'
+  },
   {
     title: 'Proyecto Chilaquiles Top',
     featured: true,
@@ -160,7 +377,7 @@ export const PROJECTS = [
       { name: 'JWT', icon: '/assets/images/icon-jwt.png' },
       { name: 'MongoDB', icon: '/assets/images/icon-mongodb.png' },
       { name: 'GitHub', icon: '/assets/images/icon-github.png' },
-      { name: 'PostMan', icon: '/assets/images/icon-postman.webp' },
+      { name: 'Postman', icon: '/assets/images/icon-postman.webp' },
       { name: 'HTML', icon: '/assets/images/icon-html.png' },
       { name: 'Bootstrap', icon: '/assets/images/icon-bootstrap.png' },
       { name: 'Tailwind', icon: '/assets/images/icon-tailwind.png' },
@@ -182,7 +399,7 @@ export const PROJECTS = [
       { name: 'JWT', icon: '/assets/images/icon-jwt.png' },
       { name: 'MongoDB', icon: '/assets/images/icon-mongodb.png' },
       { name: 'GitHub', icon: '/assets/images/icon-github.png' },
-      { name: 'PostMan', icon: '/assets/images/icon-postman.webp' },
+      { name: 'Postman', icon: '/assets/images/icon-postman.webp' },
       { name: 'HTML', icon: '/assets/images/icon-html.png' },
       { name: 'Bootstrap', icon: '/assets/images/icon-bootstrap.png' },
       { name: 'Tailwind', icon: '/assets/images/icon-tailwind.png' },
@@ -203,7 +420,7 @@ export const PROJECTS = [
       { name: 'JWT', icon: '/assets/images/icon-jwt.png' },
       { name: 'MongoDB', icon: '/assets/images/icon-mongodb.png' },
       { name: 'GitHub', icon: '/assets/images/icon-github.png' },
-      { name: 'PostMan', icon: '/assets/images/icon-postman.webp' },
+      { name: 'Postman', icon: '/assets/images/icon-postman.webp' },
       { name: 'HTML', icon: '/assets/images/icon-html.png' },
       { name: 'Bootstrap', icon: '/assets/images/icon-bootstrap.png' },
       { name: 'Tailwind', icon: '/assets/images/icon-tailwind.png' },
@@ -225,7 +442,7 @@ export const PROJECTS = [
       { name: 'JWT', icon: '/assets/images/icon-jwt.png' },
       { name: 'MongoDB', icon: '/assets/images/icon-mongodb.png' },
       { name: 'GitHub', icon: '/assets/images/icon-github.png' },
-      { name: 'PostMan', icon: '/assets/images/icon-postman.webp' },
+      { name: 'Postman', icon: '/assets/images/icon-postman.webp' },
       { name: 'HTML', icon: '/assets/images/icon-html.png' },
       { name: 'Bootstrap', icon: '/assets/images/icon-bootstrap.png' },
       { name: 'CSS', icon: '/assets/images/icon-css.png' },
@@ -297,8 +514,7 @@ export const PROJECTS = [
       { name: 'Java', icon: '/assets/images/icon-java.png' },
       { name: 'JavaFX', icon: '/assets/images/icon-javaFX.jpg' },
       { name: 'MySQL', icon: '/assets/images/icon-mysql.png' },
-      { name: 'Scene Builder', icon: '/assets/images/icon-scene.png' },
     ],
     github: 'https://github.com/IanAlfaroSantos/IN5CM-Proyecto-SuperKinal.git'
   },
-]
+];
