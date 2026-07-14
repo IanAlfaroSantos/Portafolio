@@ -7,10 +7,12 @@ const MatrixRainBackground = () => {
     const canvas = canvasRef.current;
     if (!canvas) return;
     const ctx = canvas.getContext('2d');
-    
+
     let animationFrameId;
     let width = (canvas.width = window.innerWidth);
     let height = (canvas.height = window.innerHeight);
+
+    const isMobile = window.innerWidth < 768;
 
     // Handle resize
     const handleResize = () => {
@@ -21,29 +23,32 @@ const MatrixRainBackground = () => {
     window.addEventListener('resize', handleResize);
 
     const alphabet = '01アイウエオカキクケコサシスセソタチツテトナニヌネノ01アカサタナ';
-    const fontSize = 14;
-    
-    // More columns for a denser rain — 50px apart on desktop, 38px on mobile
-    const isMobile = window.innerWidth < 768;
-    const columnSpacing = isMobile ? 38 : 50;
+    const fontSize = isMobile ? 12 : 14;
+
+    // Móvil: columnas más separadas (menos densidad = menos carga GPU)
+    const columnSpacing = isMobile ? 60 : 50;
     const columns = Math.ceil(width / columnSpacing);
 
-    // Initialize drops randomly staggered across screen
     const rainDrops = [];
     for (let x = 0; x < columns; x++) {
       rainDrops[x] = Math.random() * -120;
     }
 
-    // Classic Matrix green neon — boosted brightness
     const colors = [
-      'rgba(0, 255, 65, 0.38)',  // bright green head
-      'rgba(0, 255, 65, 0.22)',  // mid green
-      'rgba(0, 200, 50, 0.14)',  // dimmer green tail
+      'rgba(0, 255, 65, 0.38)',
+      'rgba(0, 255, 65, 0.22)',
+      'rgba(0, 200, 50, 0.14)',
     ];
 
     let lastTime = 0;
-    const fps = isMobile ? 18 : 24; // Slightly lower on mobile to save battery
+    // Móvil: 12fps (muy liviano), Desktop: 24fps
+    const fps = isMobile ? 12 : 24;
     const fpsInterval = 1000 / fps;
+
+    // Móvil: trail más rápido (fade más agresivo = menos transparencia acumulada)
+    const fadeAlpha = isMobile ? 0.12 : 0.055;
+    // Móvil: drops más lentos = menos redibujado
+    const dropSpeed = isMobile ? 0.5 : 0.85;
 
     const draw = (timestamp) => {
       animationFrameId = requestAnimationFrame(draw);
@@ -52,28 +57,24 @@ const MatrixRainBackground = () => {
       if (elapsed < fpsInterval) return;
       lastTime = timestamp - (elapsed % fpsInterval);
 
-      // Fade out frame — very low alpha = long bright trails
-      ctx.fillStyle = 'rgba(2, 3, 6, 0.055)';
+      ctx.fillStyle = `rgba(2, 3, 6, ${fadeAlpha})`;
       ctx.fillRect(0, 0, width, height);
 
       ctx.font = `${fontSize}px monospace`;
 
       for (let i = 0; i < rainDrops.length; i++) {
         const text = alphabet.charAt(Math.floor(Math.random() * alphabet.length));
-        
         const xPos = i * columnSpacing + (columnSpacing / 2);
         const yPos = rainDrops[i] * fontSize;
 
         ctx.fillStyle = colors[i % colors.length];
         ctx.fillText(text, xPos, yPos);
 
-        // Reset drop to top if it leaves screen or randomly
         if (yPos > height && Math.random() > 0.975) {
           rainDrops[i] = 0;
         }
 
-        // Drop speed: slightly faster for more energy
-        rainDrops[i] += 0.85 + Math.random() * 0.5;
+        rainDrops[i] += dropSpeed + Math.random() * 0.3;
       }
     };
 
