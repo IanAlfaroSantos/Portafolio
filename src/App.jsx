@@ -15,6 +15,7 @@ import Quote from './components/Quote';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import ProjectDetail from './components/ProjectDetail';
+import PWAUpdatePrompt from './components/PWAUpdatePrompt';
 import { ChevronUp } from 'lucide-react';
 
 const MainPortfolio = () => {
@@ -85,6 +86,7 @@ const App = () => {
       <div className="min-h-screen selection:bg-[#00c6ff] selection:text-white relative">
         <div className="interactive-cursor-glow"></div>
         <MatrixRainBackground />
+        <PWAUpdatePrompt />
         <Routes>
           <Route path="/" element={<MainPortfolio />} />
           <Route path="/proyecto/:slug" element={<ProjectDetail />} />
