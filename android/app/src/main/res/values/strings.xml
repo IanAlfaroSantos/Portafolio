@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-    <string name="app_name">Ian Alfaro</string>
-    <string name="title_activity_main">Ian Alfaro</string>
+    <string name="app_name">Portafolio</string>
+    <string name="title_activity_main">Portafolio</string>
     <string name="package_name">com.ianalfaro.portafolio</string>
     <string name="custom_url_scheme">com.ianalfaro.portafolio</string>
 </resources>

@@ -1,5 +1,9 @@
 {
   "appId": "com.ianalfaro.portafolio",
-  "appName": "Ian Alfaro",
-  "webDir": "dist"
+  "appName": "Portafolio",
+  "webDir": "dist",
+  "server": {
+    "url": "https://portafolio-five-alpha-21.vercel.app/",
+    "cleartext": true
+  }
 }
