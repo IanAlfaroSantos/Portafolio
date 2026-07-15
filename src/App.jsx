@@ -61,10 +61,12 @@ const App = () => {
     AOS.init({
       duration: 1000,
       once: true,
+      disable: 'mobile', // Desactiva AOS en móviles para máxima fluidez
     });
   }, []);
 
   useEffect(() => {
+    if (window.innerWidth < 768) return; // Desactiva tracking del mouse en móviles
     const updateMouse = (e) => {
       document.documentElement.style.setProperty('--mouse-x', `${e.clientX}px`);
       document.documentElement.style.setProperty('--mouse-y', `${e.clientY}px`);
@@ -84,7 +86,7 @@ const App = () => {
   return (
     <Router>
       <div className="min-h-screen selection:bg-[#00c6ff] selection:text-white relative">
-        <div className="interactive-cursor-glow"></div>
+        <div className="interactive-cursor-glow hidden md:block"></div>
         <MatrixRainBackground />
         <PWAUpdatePrompt />
         <Routes>

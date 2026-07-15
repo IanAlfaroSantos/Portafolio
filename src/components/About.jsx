@@ -8,19 +8,19 @@ const AboutSocialLink = ({ social }) => {
   const getFallbackIcon = () => {
     switch (social.alt) {
       case 'LinkedIn':
-        return <LinkedinIcon className="w-5 h-5 text-white group-hover:text-primary transition-colors" />;
+        return <LinkedinIcon className="w-4 h-4 sm:w-5 sm:h-5 text-white group-hover:text-primary transition-colors" />;
       case 'GitHub':
-        return <GithubIcon className="w-5 h-5 text-white group-hover:text-primary transition-colors" />;
+        return <GithubIcon className="w-4 h-4 sm:w-5 sm:h-5 text-white group-hover:text-primary transition-colors" />;
       case 'Gmail':
-        return <Mail className="w-5 h-5 text-white group-hover:text-primary transition-colors" />;
+        return <Mail className="w-4 h-4 sm:w-5 sm:h-5 text-white group-hover:text-primary transition-colors" />;
       case 'Whatsapp':
-        return <WhatsappIcon className="w-5 h-5 text-white group-hover:text-primary transition-colors" />;
+        return <WhatsappIcon className="w-4 h-4 sm:w-5 sm:h-5 text-white group-hover:text-primary transition-colors" />;
       case 'Facebook':
-        return <FacebookIcon className="w-5 h-5 text-white group-hover:text-primary transition-colors" />;
+        return <FacebookIcon className="w-4 h-4 sm:w-5 sm:h-5 text-white group-hover:text-primary transition-colors" />;
       case 'Instagram':
-        return <InstagramIcon className="w-5 h-5 text-white group-hover:text-primary transition-colors" />;
+        return <InstagramIcon className="w-4 h-4 sm:w-5 sm:h-5 text-white group-hover:text-primary transition-colors" />;
       default:
-        return <Mail className="w-5 h-5 text-white group-hover:text-primary transition-colors" />;
+        return <Mail className="w-4 h-4 sm:w-5 sm:h-5 text-white group-hover:text-primary transition-colors" />;
     }
   };
 
@@ -29,7 +29,7 @@ const AboutSocialLink = ({ social }) => {
       href={social.href}
       target="_blank"
       rel="noreferrer"
-      className="aspect-square glass-panel flex items-center justify-center p-3 hover:scale-105 hover:border-secondary/40 transition-all duration-300 group relative"
+      className="aspect-square glass-panel flex items-center justify-center p-2 sm:p-3 hover:scale-105 hover:border-secondary/40 transition-all duration-300 group relative max-w-[45px] sm:max-w-none mx-auto sm:mx-0 w-full"
       title={social.alt}
     >
       <div className="absolute top-0 left-0 w-1 h-1 border-t border-l border-white/10 group-hover:border-primary transition-colors"></div>
@@ -41,7 +41,7 @@ const AboutSocialLink = ({ social }) => {
         <img 
           src={social.img} 
           alt={social.alt} 
-          className="w-full h-full object-contain filter brightness-90 group-hover:brightness-100 group-hover:scale-110 transition-all duration-300" 
+          className="w-5 h-5 sm:w-full sm:h-full object-contain filter brightness-90 group-hover:brightness-100 group-hover:scale-110 transition-all duration-300" 
           onError={() => setImgFailed(true)}
         />
       ) : (

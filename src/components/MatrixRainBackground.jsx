@@ -26,7 +26,7 @@ const MatrixRainBackground = () => {
     const fontSize = isMobile ? 12 : 14;
 
     // Móvil: columnas más separadas (menos densidad = menos carga GPU)
-    const columnSpacing = isMobile ? 60 : 50;
+    const columnSpacing = isMobile ? 80 : 50;
     const columns = Math.ceil(width / columnSpacing);
 
     const rainDrops = [];
