@@ -52,6 +52,7 @@ const MainPortfolio = () => {
 const App = () => {
   const [loading, setLoading] = useState(true);
   const [isOnline, setIsOnline] = useState(navigator.onLine);
+  const [showBackOnline, setShowBackOnline] = useState(false);
 
   useEffect(() => {
     const timer = setTimeout(() => setLoading(false), 1500);
@@ -59,8 +60,25 @@ const App = () => {
   }, []);
 
   useEffect(() => {
-    const handleOnline = () => setIsOnline(true);
-    const handleOffline = () => setIsOnline(false);
+    let hideTimer;
+    
+    const handleOnline = () => {
+      setIsOnline(true);
+      setShowBackOnline(true);
+      
+      // Limpiar timer previo si existe
+      if (hideTimer) clearTimeout(hideTimer);
+      
+      hideTimer = setTimeout(() => {
+        setShowBackOnline(false);
+      }, 3000); // Se oculta tras 3 segundos
+    };
+    
+    const handleOffline = () => {
+      setIsOnline(false);
+      setShowBackOnline(false);
+      if (hideTimer) clearTimeout(hideTimer);
+    };
 
     window.addEventListener('online', handleOnline);
     window.addEventListener('offline', handleOffline);
@@ -68,6 +86,7 @@ const App = () => {
     return () => {
       window.removeEventListener('online', handleOnline);
       window.removeEventListener('offline', handleOffline);
+      if (hideTimer) clearTimeout(hideTimer);
     };
   }, []);
 
@@ -104,14 +123,26 @@ const App = () => {
         <MatrixRainBackground />
         <PWAUpdatePrompt />
         
-        {/* Banner de Modo Sin Conexión estilo Spotify */}
+        {/* Banner de Sin Conexión (Rojo/Accent) */}
         {!isOnline && (
           <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-[9999] animate-fade-in
             flex items-center gap-2 px-4 py-2.5 rounded-xl border border-accent/30
             bg-dark-bg/95 backdrop-blur-md shadow-[0_0_25px_rgba(255,0,122,0.2)]">
             <WifiOff className="w-3.5 h-3.5 text-accent animate-pulse" />
             <span className="text-[9px] font-mono font-bold text-accent uppercase tracking-widest">
-              Sin conexión • Modo local activo
+              Sin conexión a internet
+            </span>
+          </div>
+        )}
+
+        {/* Banner de Conexión Recuperada (Verde Matrix) */}
+        {isOnline && showBackOnline && (
+          <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-[9999] animate-fade-in
+            flex items-center gap-2 px-4 py-2.5 rounded-xl border border-[#00ff41]/30
+            bg-dark-bg/95 backdrop-blur-md shadow-[0_0_25px_rgba(0,255,65,0.25)]">
+            <div className="w-1.5 h-1.5 rounded-full bg-[#00ff41] animate-ping" />
+            <span className="text-[9px] font-mono font-bold text-[#00ff41] uppercase tracking-widest">
+              Recuperaste la conexión a internet
             </span>
           </div>
         )}
