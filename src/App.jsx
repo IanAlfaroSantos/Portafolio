@@ -16,7 +16,7 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import ProjectDetail from './components/ProjectDetail';
 import PWAUpdatePrompt from './components/PWAUpdatePrompt';
-import { ChevronUp } from 'lucide-react';
+import { ChevronUp, WifiOff } from 'lucide-react';
 
 const MainPortfolio = () => {
   useEffect(() => {
@@ -51,10 +51,24 @@ const MainPortfolio = () => {
 
 const App = () => {
   const [loading, setLoading] = useState(true);
+  const [isOnline, setIsOnline] = useState(navigator.onLine);
 
   useEffect(() => {
     const timer = setTimeout(() => setLoading(false), 1500);
     return () => clearTimeout(timer);
+  }, []);
+
+  useEffect(() => {
+    const handleOnline = () => setIsOnline(true);
+    const handleOffline = () => setIsOnline(false);
+
+    window.addEventListener('online', handleOnline);
+    window.addEventListener('offline', handleOffline);
+
+    return () => {
+      window.removeEventListener('online', handleOnline);
+      window.removeEventListener('offline', handleOffline);
+    };
   }, []);
 
   useEffect(() => {
@@ -89,6 +103,19 @@ const App = () => {
         <div className="interactive-cursor-glow hidden md:block"></div>
         <MatrixRainBackground />
         <PWAUpdatePrompt />
+        
+        {/* Banner de Modo Sin Conexión estilo Spotify */}
+        {!isOnline && (
+          <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-[9999] animate-fade-in
+            flex items-center gap-2 px-4 py-2.5 rounded-xl border border-accent/30
+            bg-dark-bg/95 backdrop-blur-md shadow-[0_0_25px_rgba(255,0,122,0.2)]">
+            <WifiOff className="w-3.5 h-3.5 text-accent animate-pulse" />
+            <span className="text-[9px] font-mono font-bold text-accent uppercase tracking-widest">
+              Sin conexión • Modo local activo
+            </span>
+          </div>
+        )}
+
         <Routes>
           <Route path="/" element={<MainPortfolio />} />
           <Route path="/proyecto/:slug" element={<ProjectDetail />} />
