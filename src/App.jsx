@@ -59,28 +59,57 @@ const App = () => {
     return () => clearTimeout(timer);
   }, []);
 
+  // Verificar si recuperamos conexión (redirección desde local)
+  useEffect(() => {
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.get('backOnline') === 'true') {
+      setShowBackOnline(true);
+      const cleanUrl = window.location.pathname + window.location.hash;
+      window.history.replaceState({}, document.title, cleanUrl);
+      const timer = setTimeout(() => {
+        setShowBackOnline(false);
+      }, 3000);
+      return () => clearTimeout(timer);
+    }
+  }, []);
+
   useEffect(() => {
     let hideTimer;
     let intervalId;
 
     const checkConnection = async () => {
+      const isLocalHost = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+      const isDevServer = window.location.port === '5173' || window.location.port === '4173';
+
       try {
         // Hacemos una petición rápida de tipo HEAD al manifest para verificar conexión real
-        const response = await fetch('https://portafolio-five-alpha-21.vercel.app/manifest.webmanifest', {
+        await fetch('https://portafolio-five-alpha-21.vercel.app/manifest.webmanifest', {
           method: 'HEAD',
           cache: 'no-store',
           mode: 'no-cors'
         });
         
         setIsOnline(true);
+
+        // Si estamos en local pero ahora sí hay internet -> Redirigir a la web en vivo
+        if (isLocalHost && !isDevServer) {
+          window.location.replace("https://portafolio-five-alpha-21.vercel.app/?backOnline=true");
+        }
       } catch (err) {
         setIsOnline(false);
         setShowBackOnline(false);
+
+        // Si estamos en la web en vivo pero no hay internet -> Redirigir a la versión local
+        if (!isLocalHost) {
+          const localOrigin = localStorage.getItem('localOrigin');
+          if (localOrigin) {
+            window.location.replace(localOrigin);
+          }
+        }
       }
     };
 
     const handleOnline = () => {
-      // Verificamos si de verdad hay conexión real antes de cantar victoria
       checkConnection().then(() => {
         setIsOnline(prev => {
           if (!prev) {
@@ -97,16 +126,24 @@ const App = () => {
       setIsOnline(false);
       setShowBackOnline(false);
       if (hideTimer) clearTimeout(hideTimer);
+      
+      // Forzar redirección al local inmediato al perder red en la web
+      const isLocalHost = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+      if (!isLocalHost) {
+        const localOrigin = localStorage.getItem('localOrigin');
+        if (localOrigin) {
+          window.location.replace(localOrigin);
+        }
+      }
     };
 
-    // Registrar eventos nativos
     window.addEventListener('online', handleOnline);
     window.addEventListener('offline', handleOffline);
 
     // Correr verificación al montar la app
     checkConnection();
 
-    // Intervalo de verificación activa cada 10 segundos
+    // Verificación cada 10 segundos
     intervalId = setInterval(checkConnection, 10000);
 
     return () => {
