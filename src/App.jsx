@@ -61,32 +61,59 @@ const App = () => {
 
   useEffect(() => {
     let hideTimer;
-    
-    const handleOnline = () => {
-      setIsOnline(true);
-      setShowBackOnline(true);
-      
-      // Limpiar timer previo si existe
-      if (hideTimer) clearTimeout(hideTimer);
-      
-      hideTimer = setTimeout(() => {
+    let intervalId;
+
+    const checkConnection = async () => {
+      try {
+        // Hacemos una petición rápida de tipo HEAD al manifest para verificar conexión real
+        const response = await fetch('https://portafolio-five-alpha-21.vercel.app/manifest.webmanifest', {
+          method: 'HEAD',
+          cache: 'no-store',
+          mode: 'no-cors'
+        });
+        
+        setIsOnline(true);
+      } catch (err) {
+        setIsOnline(false);
         setShowBackOnline(false);
-      }, 3000); // Se oculta tras 3 segundos
+      }
     };
-    
+
+    const handleOnline = () => {
+      // Verificamos si de verdad hay conexión real antes de cantar victoria
+      checkConnection().then(() => {
+        setIsOnline(prev => {
+          if (!prev) {
+            setShowBackOnline(true);
+            if (hideTimer) clearTimeout(hideTimer);
+            hideTimer = setTimeout(() => setShowBackOnline(false), 3000);
+          }
+          return true;
+        });
+      });
+    };
+
     const handleOffline = () => {
       setIsOnline(false);
       setShowBackOnline(false);
       if (hideTimer) clearTimeout(hideTimer);
     };
 
+    // Registrar eventos nativos
     window.addEventListener('online', handleOnline);
     window.addEventListener('offline', handleOffline);
+
+    // Correr verificación al montar la app
+    checkConnection();
+
+    // Intervalo de verificación activa cada 10 segundos
+    intervalId = setInterval(checkConnection, 10000);
 
     return () => {
       window.removeEventListener('online', handleOnline);
       window.removeEventListener('offline', handleOffline);
       if (hideTimer) clearTimeout(hideTimer);
+      if (intervalId) clearInterval(intervalId);
     };
   }, []);
 

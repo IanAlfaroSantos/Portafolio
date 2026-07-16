@@ -39,6 +39,9 @@ export default defineConfig({
         ],
       },
       workbox: {
+        globPatterns: [
+          "**/*.{js,css,html,ico,png,svg,webmanifest,jpeg,jpg}"
+        ],
         // Siempre intenta cargar desde la red primero (versión más reciente)
         // Si no hay red, usa el caché
         runtimeCaching: [
@@ -48,8 +51,8 @@ export default defineConfig({
             options: {
               cacheName: "portfolio-cache",
               expiration: {
-                maxEntries: 50,
-                maxAgeSeconds: 60 * 60 * 24, // 1 día
+                maxEntries: 100,
+                maxAgeSeconds: 60 * 60 * 24 * 7, // 7 días para mayor estabilidad offline
               },
             },
           },
