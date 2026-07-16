@@ -9,13 +9,15 @@
   <meta name="robots" content="index,follow">
 
   <script>
-    // Redirigir al portafolio en vivo de Vercel solo si estamos en la app (no en desarrollo local)
+    // Redirigir al portafolio en vivo de Vercel solo si estamos en la app con internet (no en desarrollo local y no sin conexión)
     if (
-      ((window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') && 
-       window.location.port !== '5173' && 
-       window.location.port !== '4173') ||
-      window.location.protocol === 'file:' || 
-      window.location.protocol === 'capacitor:'
+      navigator.onLine && (
+        ((window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') && 
+         window.location.port !== '5173' && 
+         window.location.port !== '4173') ||
+        window.location.protocol === 'file:' || 
+        window.location.protocol === 'capacitor:'
+      )
     ) {
       window.location.replace("https://portafolio-five-alpha-21.vercel.app/");
     }
@@ -322,6 +324,14 @@
     ::-webkit-scrollbar-track { background: #010204; }
     ::-webkit-scrollbar-thumb { background: #0c1120; border-radius: 10px; }
     ::-webkit-scrollbar-thumb:hover { background: #00f0ff; }
+
+    @media (max-width: 767px) {
+      [data-aos] {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+      }
+    }
   </style>
 </head>
 
