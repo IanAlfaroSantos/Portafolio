@@ -8,6 +8,18 @@
   <meta name="description" content="Portafolio | Ian Alfaro Desarrollador Web">
   <meta name="robots" content="index,follow">
 
+  <script>
+    // Redirigir al portafolio en vivo de Vercel solo si estamos en la app (no en desarrollo local)
+    if (
+      ((window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') && 
+       window.location.port !== '5173' && 
+       window.location.port !== '4173') ||
+      window.location.protocol === 'file:' || 
+      window.location.protocol === 'capacitor:'
+    ) {
+      window.location.replace("https://portafolio-five-alpha-21.vercel.app/");
+    }
+  </script>
   <title>Ian Alfaro | Desarrollador Web</title>
 
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
