@@ -147,15 +147,6 @@ const App = () => {
         <MatrixRainBackground />
         <PWAUpdatePrompt />
 
-        {/* 1. MODO EN VIVO (Con internet): Renderiza el portafolio en vivo de Vercel */}
-        {isOnline && (
-          <iframe
-            src="https://portafolio-five-alpha-21.vercel.app/"
-            className="fixed inset-0 w-full h-full border-none z-[80] bg-[#020306]"
-            title="Portafolio"
-          />
-        )}
-        
         {/* Banner de Sin Conexión (Rojo/Accent) */}
         {!isOnline && (
           <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-[9999] animate-fade-in
@@ -180,7 +171,6 @@ const App = () => {
           </div>
         )}
 
-        {/* 2. MODO LOCAL (Sin internet): Renderiza los componentes locales compilados en el APK */}
         <Routes>
           <Route path="/" element={<MainPortfolio />} />
           <Route path="/proyecto/:slug" element={<ProjectDetail />} />
